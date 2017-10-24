@@ -1,0 +1,71 @@
+1. Olympus: 
+     get the Current configuration
+
+
+2. Replica: 
+  
+receive(requestid, operation o)
+   if currentstate is immutable 
+	   then send error message to client
+  
+   if currentstate is active
+   		if requestid is present in history  				//It is a duplicate request or retransmission
+   		   if result is present in the cache
+   		      then send the result
+   		   else 											//result not present in the cache
+			   if node is not head 
+		    	  send request to head
+
+		  	startTimer()
+		  	if we have a timeout
+		  		Ask Olympus for Reconfiguration Request
+
+		else  												//RequestID not present in history i.e. a new operation
+			if the node is head
+				Get a new slot number
+				Sign order statement with own private key and add it to the order proof
+				Send the shuttle with the resultproof
+			else for the non head nodes   					//It could be retransmission for the replica
+				send request to head and start the timer
+				if timeout
+					then send reconfiguration request to Olympus
+
+
+ordercommand(replicaid, s,o)
+	if no existing o' for s in history
+	   then add (requestid, s,o,replicaid) to history
+	else
+		state= immutable
+
+receive(requestid, ordershuttle)
+    if invalid orderproof 
+    	then drop that request
+    sign order statement using private key
+    add orderstatement to orderproof
+    execute the operation o
+    sign resultstatement using private key
+    add resultstatement to resultproof in shuttle
+
+    if node is tail
+    	then send the resultproof to client
+    	also send resultshuttle to predecessor node
+    else
+    	send the resultshuttle to successor node	
+
+
+
+
+3. Client
+	
+send()
+ 	get current configuration from Olympus
+ 	get head from the current configuration
+ 	send requestid, operation to the head node
+ 	start the timer
+ 	if timeout
+ 		send operation to all the nodes in the current configuration	
+
+receive()
+	decyprt the result received using the public key
+	if the result proof is not matching
+		then again send request using send()
