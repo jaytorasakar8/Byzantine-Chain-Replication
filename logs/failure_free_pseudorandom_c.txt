@@ -1,0 +1,43 @@
+2017-10-25 02:15:22 INFO     <Client:b1802> sending get config request to olympus
+2017-10-25 02:15:22 INFO     <Client:b1802> sending generate key request to olympus
+2017-10-25 02:15:22 INFO     <Client:b1802> getting public key map from olympus
+2017-10-25 02:15:22 INFO     <Client:b1802> received public key map from olympus
+2017-10-25 02:15:22 INFO     <Client:b1802> the workload is : ['pseudorandom(23,12)']
+2017-10-25 02:15:22 INFO     <Client:b1802> generating the pseudo random workload
+2017-10-25 02:15:22 INFO     <Client:b1802> sending get operation with space to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;0 is 
+2017-10-25 02:15:22 INFO     <Client:b1802> sending append operation with ['vodka', 'bulletin'] to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;1 is FAIL
+2017-10-25 02:15:22 INFO     <Client:b1802> sending put operation with 'material','prepaid' to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;2 is OK
+2017-10-25 02:15:22 INFO     <Client:b1802> sending append operation with ['brick', 'prepaid'] to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;3 is FAIL
+2017-10-25 02:15:22 INFO     <Client:b1802> sending slice operation with ['misses', '3:6'] to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;4 is FAIL
+2017-10-25 02:15:22 INFO     <Client:b1802> sending get operation with large to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;5 is 
+2017-10-25 02:15:22 INFO     <Client:b1802> sending put operation with 'misses','brick' to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;6 is OK
+2017-10-25 02:15:22 INFO     <Client:b1802> sending put operation with 'vodka','material' to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;7 is OK
+2017-10-25 02:15:22 INFO     <Client:b1802> sending slice operation with ['misses', '3:5'] to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;8 is OK
+2017-10-25 02:15:22 INFO     <Client:b1802> sending append operation with ['osama', 'space'] to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;9 is FAIL
+2017-10-25 02:15:22 INFO     <Client:b1802> sending slice operation with ['material', '2:8'] to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;10 is FAIL
+2017-10-25 02:15:22 INFO     <Client:b1802> sending slice operation with ['large', '4:5'] to head
+2017-10-25 02:15:22 INFO     <Client:b1802> received result shuttle from :<Replica:b1805>
+2017-10-25 02:15:22 INFO     <Client:b1802> the result for :<Client:b1802>;11 is FAIL
+2017-10-25 02:15:22 INFO     <Client:b1802>The final state is: {'material': 'prepaid', 'misses': 'ck', 'vodka': 'material'}

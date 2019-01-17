@@ -1,0 +1,907 @@
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending get config request to olympus
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending generate key request to olympus
+2017-11-23 00:07:03 INFO     <Client:bfc04> getting public key map from olympus
+2017-11-23 00:07:03 INFO     <Client:bfc04> received public key map from olympus
+2017-11-23 00:07:03 INFO     <Client:bfc04> the workload is : ['pseudorandom(192,300)']
+2017-11-23 00:07:03 INFO     <Client:bfc04> generating the pseudo random workload
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['consult', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;0 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['lungs', 'chubby'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;1 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;2 is 
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending get operation with communion to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;3 is 
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['sesame', 'omissions'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;4 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['omissions', 'cultivated'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;5 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['lungs', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;6 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending put operation with 'communion','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;7 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending slice operation with ['library', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;8 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending slice operation with ['chubby', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;9 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending put operation with 'burning','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;10 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['lungs', 'library'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;11 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending get operation with burning to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;12 is consult
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['consult', 'scrapbooking'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;13 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending put operation with 'communion','lungs' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;14 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;15 is 
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;16 is 
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending put operation with 'burning','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc04> the result for :<Client:bfc04>;17 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc04> sending append operation with ['sesame', 'library'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;18 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['scrapbooking', '8:10'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;19 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;20 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending put operation with 'consult','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;21 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;22 is omissions
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;23 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;24 is omissions
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with chubby to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;25 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;26 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending append operation with ['library', 'chubby'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;27 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['chubby', '2:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;28 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;29 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['lungs', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;30 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending append operation with ['ireland', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;31 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending put operation with 'lungs','library' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;32 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending append operation with ['library', 'chubby'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;33 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['cultivated', '6:8'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;34 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['omissions', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;35 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with chubby to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;36 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['lungs', '1:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;37 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;38 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending put operation with 'library','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;39 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['lac', '3:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;40 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;41 is 
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending put operation with 'ireland','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;42 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending slice operation with ['consult', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;43 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending put operation with 'burning','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;44 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending put operation with 'cultivated','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc04> the result for :<Client:bfc04>;45 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc04> sending put operation with 'cultivated','cultivated' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;46 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;47 is 
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending append operation with ['lungs', 'lac'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;48 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending slice operation with ['burning', '3:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;49 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;50 is consult
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;51 is consult
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending slice operation with ['chubby', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;52 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with chubby to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;53 is 
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending put operation with 'library','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;54 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;55 is communion
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending append operation with ['communion', 'consult'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;56 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with burning to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;57 is nin
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending append operation with ['chubby', 'library'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;58 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;59 is 
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending slice operation with ['sesame', '1:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;60 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending put operation with 'communion','lac' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;61 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending append operation with ['lungs', 'omissions'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;62 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;63 is communion
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending slice operation with ['burning', '4:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;64 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending slice operation with ['scrapbooking', '1:12'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;65 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending put operation with 'burning','scrapbooking' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;66 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending append operation with ['library', 'cultivated'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;67 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with lac to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;68 is 
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending put operation with 'consult','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;69 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending put operation with 'ireland','ireland' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;70 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending append operation with ['scrapbooking', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;71 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;72 is 
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending append operation with ['sesame', 'library'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;73 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with lac to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc04> the result for :<Client:bfc04>;74 is 
+2017-11-23 00:07:05 INFO     <Client:bfc04> sending get operation with communion to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;75 is lac
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending slice operation with ['communion', '4:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;76 is FAIL
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'lungs','scrapbooking' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;77 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;78 is omissions cultivated
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending slice operation with ['library', '2:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;79 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending slice operation with ['lungs', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;80 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'consult','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;81 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'scrapbooking','cultivated' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;82 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'communion','library' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;83 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending append operation with ['sesame', 'burning'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;84 is FAIL
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending append operation with ['consult', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;85 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending append operation with ['lungs', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;86 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending append operation with ['library', 'consult'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;87 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;88 is issi consult
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending slice operation with ['communion', '6:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;89 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'burning','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;90 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'burning','lungs' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;91 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'ireland','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;92 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;93 is chubby lungs
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;94 is 
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending append operation with ['chubby', 'cultivated'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;95 is FAIL
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending get operation with chubby to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;96 is 
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending slice operation with ['ireland', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;97 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'cultivated','library' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;98 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending append operation with ['sesame', 'communion'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;99 is FAIL
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending append operation with ['ireland', 'burning'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;100 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;101 is 
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc04> the result for :<Client:bfc04>;102 is omm burning
+2017-11-23 00:07:06 INFO     <Client:bfc04> sending put operation with 'sesame','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;103 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending slice operation with ['ireland', '5:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;104 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending put operation with 'sesame','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;105 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending put operation with 'omissions','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;106 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;107 is omissions
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending slice operation with ['lac', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;108 is FAIL
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;109 is issi consult
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;110 is omissions
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending put operation with 'lac','cultivated' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;111 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;112 is omissions
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;113 is u
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending append operation with ['chubby', 'library'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;114 is FAIL
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending append operation with ['chubby', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;115 is FAIL
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with cultivated to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;116 is library
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending append operation with ['consult', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;117 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending put operation with 'consult','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;118 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with communion to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;119 is y
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending put operation with 'omissions','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;120 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;121 is omissions
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending append operation with ['lac', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;122 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;123 is cultivated
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;124 is a sesame
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;125 is cultivated
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;126 is omissions
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending slice operation with ['library', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;127 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending append operation with ['ireland', 'communion'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;128 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending put operation with 'consult','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;129 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;130 is u communion
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending slice operation with ['lac', '1:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc04> the result for :<Client:bfc04>;131 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc04> sending put operation with 'lungs','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;132 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending put operation with 'library','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;133 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;134 is communion
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with burning to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;135 is lungs
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;136 is omissions
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending slice operation with ['cultivated', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;137 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;138 is cultivated
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending put operation with 'chubby','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;139 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending put operation with 'cultivated','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;140 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;141 is omissions
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending append operation with ['consult', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;142 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending append operation with ['lungs', 'cultivated'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;143 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending put operation with 'omissions','omissions' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;144 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;145 is consult lungs
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending slice operation with ['burning', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;146 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with lac to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;147 is ul
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending put operation with 'ireland','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;148 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending slice operation with ['library', '2:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;149 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;150 is burning
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending append operation with ['consult', 'cultivated'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;151 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with lac to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;152 is ul
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending slice operation with ['ireland', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;153 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending put operation with 'lac','scrapbooking' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;154 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending slice operation with ['lac', '1:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;155 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending append operation with ['scrapbooking', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;156 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending get operation with lac to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;157 is cr
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending slice operation with ['chubby', '1:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;158 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending append operation with ['scrapbooking', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;159 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending put operation with 'cultivated','scrapbooking' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc04> the result for :<Client:bfc04>;160 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc04> sending slice operation with ['communion', '3:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;161 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending slice operation with ['sesame', '4:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;162 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending get operation with burning to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;163 is s
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending slice operation with ['lac', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;164 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;165 is communion cultivated
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending append operation with ['consult', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;166 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending append operation with ['library', 'omissions'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;167 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending slice operation with ['sesame', '2:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;168 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending append operation with ['ireland', 'ireland'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;169 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'lac','library' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;170 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending append operation with ['burning', 'lac'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;171 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;172 is communion cultivated
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending slice operation with ['sesame', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;173 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'ireland','sesame' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;174 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;175 is si
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;176 is consult lungs cultivated lungs
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending append operation with ['cultivated', 'omissions'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;177 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'ireland','cultivated' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;178 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'scrapbooking','sesame' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;179 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'omissions','ireland' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;180 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'lungs','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;181 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending append operation with ['consult', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;182 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'consult','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;183 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending get operation with communion to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;184 is y
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;185 is sesame
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending append operation with ['scrapbooking', 'consult'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;186 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'library','sesame' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;187 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending put operation with 'lungs','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc04> the result for :<Client:bfc04>;188 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc04> sending slice operation with ['communion', '1:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;189 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending slice operation with ['communion', '1:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;190 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending slice operation with ['communion', '5:8'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;191 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending put operation with 'cultivated','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;192 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;193 is sesame
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending slice operation with ['burning', '6:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;194 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending put operation with 'library','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;195 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending put operation with 'library','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;196 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending slice operation with ['communion', '7:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;197 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending put operation with 'sesame','ireland' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;198 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['consult', 'consult'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;199 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;200 is ireland
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['ireland', 'cultivated'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;201 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['omissions', 'library'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;202 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending slice operation with ['cultivated', '5:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;203 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending get operation with cultivated to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;204 is nion
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending slice operation with ['lungs', '2:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;205 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['library', 'consult'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;206 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending put operation with 'burning','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;207 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending put operation with 'consult','cultivated' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;208 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['library', 'omissions'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;209 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['omissions', 'chubby'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;210 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['lac', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;211 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['communion', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;212 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending slice operation with ['cultivated', '2:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;213 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending append operation with ['lungs', 'lac'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc04> the result for :<Client:bfc04>;214 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc04> sending get operation with cultivated to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;215 is nion
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['sesame', '5:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;216 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['consult', 'burning'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;217 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['lac', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;218 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['lungs', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;219 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending put operation with 'burning','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;220 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['scrapbooking', 'omissions'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;221 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending get operation with lac to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;222 is i
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['sesame', '3:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;223 is FAIL
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending put operation with 'chubby','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;224 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['burning', 'cultivated'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;225 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['cultivated', '3:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;226 is FAIL
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['burning', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;227 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['chubby', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;228 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['library', '5:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;229 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['library', 'lungs'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;230 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['chubby', 'ireland'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;231 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['sesame', '2:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;232 is FAIL
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['lac', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;233 is FAIL
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['burning', 'consult'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;234 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;235 is b
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;236 is sesame consult omissions
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['library', 'ireland'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;237 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['burning', '1:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;238 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending put operation with 'omissions','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;239 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending put operation with 'cultivated','cultivated' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;240 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending append operation with ['cultivated', 'sesame'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;241 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['communion', '8:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc04> the result for :<Client:bfc04>;242 is FAIL
+2017-11-23 00:07:11 INFO     <Client:bfc04> sending slice operation with ['burning', '3:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;243 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;244 is  lungs ireland
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending append operation with ['chubby', 'communion'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;245 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending put operation with 'lac','scrapbooking' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;246 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with chubby to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;247 is burning lungs ireland communion
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending append operation with ['lac', 'communion'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;248 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;249 is b
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending put operation with 'consult','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;250 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending slice operation with ['lac', '2:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;251 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with sesame to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;252 is n
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending slice operation with ['library', '1:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;253 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending slice operation with ['sesame', '3:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;254 is FAIL
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with communion to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;255 is y sesame
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with consult to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;256 is chubby
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending slice operation with ['lungs', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;257 is FAIL
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending put operation with 'cultivated','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;258 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending append operation with ['sesame', 'burning'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;259 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending slice operation with ['scrapbooking', '7:11'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;260 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending slice operation with ['sesame', '5:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;261 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with cultivated to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;262 is chubby
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending append operation with ['chubby', 'omissions'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;263 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending put operation with 'omissions','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;264 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with communion to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;265 is y sesame
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending append operation with ['chubby', 'communion'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;266 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending put operation with 'cultivated','chubby' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;267 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending put operation with 'burning','sesame' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;268 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending put operation with 'lungs','burning' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;269 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending get operation with burning to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc04> the result for :<Client:bfc04>;270 is sesame
+2017-11-23 00:07:12 INFO     <Client:bfc04> sending slice operation with ['lac', '3:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;271 is FAIL
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;272 is cons
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending slice operation with ['scrapbooking', '5:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;273 is FAIL
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with chubby to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;274 is burning lungs ireland communion omissions communion
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending slice operation with ['lungs', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;275 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;276 is chubby
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;277 is r
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with communion to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;278 is y sesame
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with burning to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;279 is sesame
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending put operation with 'ireland','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;280 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending put operation with 'sesame','lac' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;281 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with ireland to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;282 is consult
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending append operation with ['lungs', 'library'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;283 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending put operation with 'library','consult' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;284 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending slice operation with ['lac', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;285 is FAIL
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending put operation with 'scrapbooking','communion' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;286 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending append operation with ['library', 'scrapbooking'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;287 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with burning to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;288 is sesame
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with scrapbooking to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;289 is communion
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending slice operation with ['consult', '2:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;290 is FAIL
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with library to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;291 is consult scrapbooking
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending append operation with ['ireland', 'consult'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;292 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending append operation with ['lungs', 'burning'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;293 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending append operation with ['sesame', 'communion'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;294 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with lungs to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;295 is r library burning
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending slice operation with ['chubby', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;296 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with cultivated to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;297 is chubby
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending put operation with 'sesame','scrapbooking' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc04> the result for :<Client:bfc04>;298 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc04> sending get operation with omissions to head :<Replica:bfc08>
+2017-11-23 00:07:14 INFO     <Client:bfc04> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:14 INFO     <Client:bfc04> the result for :<Client:bfc04>;299 is chubby
+2017-11-23 00:07:14 INFO     <Client:bfc04>The final state is: {'julie': 'l', 'runners': 'endorsement supp transporting endorsement supp positions erickson', 'kraft': 'julie', 'endorsement': 'spoken endorsement', 'moines': 'bl escorts', 'sven': '', 'communion': 'y sesame', 'bl': 'positions bl', 'extracting': 'bl', 'burning': 'sesame', 'transporting': 'escorts endorsement supp', 'consult': 'chubby', 'playoffs': 'bakersfield', 'erickson': 'runners', 'questioning': 'io maintainer', 'bakersfield': 'yof bakersfield', 'lungs': 'r library burning', 'subscribers': 'tra', 'quilting': 's', 'rope': 'sven', 'library': 'consult scrapbooking', 'ireland': 'consult consult', 'cultivated': 'chubby', 'importance': 'playoffs', 'alleviate': 'sven', 'escorts': '', 'spoken': 'e', 'boxed': 'p playoffs', 'scrapbooking': 'communion', 'supp': 'moines', 'sesame': 'scrapbooking', 'omissions': 'chubby', 'maintainer': 'quilting questioning importance', 'lac': '', 'positions': 'sport', 'chubby': 'u'}

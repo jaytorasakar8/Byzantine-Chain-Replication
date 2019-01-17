@@ -1,0 +1,281 @@
+import time
+import sys
+import logging
+import nacl.encoding
+import nacl.signing
+replica = import_da('Replica')
+
+class Olympus(process):
+  def setup(conf, cni, fc, cc):
+    self.replicas = {}
+    self.clientKeyMap = {}
+    self.replicaKeyMap = {}
+    self.prikey = ""
+    self.pubkey = ""
+    self.client_num_id = cni
+    self.failures = fc
+    self.logger = None
+    self.curr_config = cc
+    self.reconfig_flag = 0
+    self.wedged_replies = {}
+    self.caught_up = 0
+    self.caught_up_hash = {}
+    self.caught_up_states = {}
+
+  def get_logger(name, filename):
+    formatter = logging.Formatter(fmt='%(asctime)s %(levelname)-8s %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    hld = logging.FileHandler(filename, mode='a')
+    hld.setFormatter(formatter)
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(hld)
+    return logger
+
+  def run():
+    self.logger = get_logger('olympus', conf['test_case_name']+'_o.txt')
+    logger.info(self.client_num_id)
+    self.prikey = nacl.signing.SigningKey.generate()
+    self.pubkey = self.prikey.verify_key
+    logger.info("Created public and private keys for self")
+    start_st = {}
+    create_replicas(start_st)
+    while(True):
+      await(self.reconfig_flag == 1)
+      #CHANGE THIS
+      await(len(self.wedged_replies) == len(self.replicas))
+      logger.info(str(self) + " Wedged Replies are %s", self.wedged_replies)
+
+      #validate every history for no holes
+      logger.info(str(self) + " Reconfiguration underway")
+      logger.info(str(self) + " Validating Individual histories")
+      for r in self.wedged_replies:
+        h = self.wedged_replies[r][0]
+        logger.info(str(self) + " History for : " + str(r) + " is : %s", h)
+        prev = -1
+        #if the history is valid maybe add the replica id to a list of quorum
+        for req in h:
+          if(prev == -1):
+            prev = int(h[req].split(';')[1])
+          else:
+            if prev+1 == int(h[req].split(';')[1]):
+              prev = int(h[req].split(';')[1])
+            else:
+              output("This replica doesn't have correct history")
+      logger.info(str(self) + " Getting highest checkpoint")
+
+      #get highest checkpoint
+      max_cp = 0
+      for r in self.wedged_replies:
+        cp = self.wedged_replies[r][1]
+        if(len(cp) != 0):
+          cp_slot = list(cp)[0]
+        else:
+          cp_slot = 0
+        if(max_cp < cp_slot):
+          max_cp = cp_slot
+        logger.info(str(self) + " Last Checkpoint for : " + str(r) + " is : " + str(cp_slot))
+      logger.info(str(self) + " Highest Checkpoint : " + str(cp_slot))
+
+      #get highest slot number seen by a replica
+      logger.info(str(self) + " Getting highest slot seen by replica")
+      h_slot = -1
+      h_s_rep = None
+      for r in self.wedged_replies:
+        h = self.wedged_replies[r][0]
+        len_h = len(list(h))
+        if(len_h != 0):
+          last_os = h[list(h)[len_h - 1]]
+          lslot = int(last_os.split(';')[1])
+          if(h_slot < lslot):
+            h_slot = lslot
+            h_s_rep = r
+          logger.info(str(self) + " Last os for " + str(r) + "is : " + last_os)
+          logger.info(str(self) + " Last Slot seen by " + str(r) + "is : " + str(lslot))
+
+        else:
+          logger.info(str(self) + " " + str(r) + "has completely truncated history")
+      inv_catchup = False
+      if((h_slot + 1) != max_cp):
+        logger.info(str(self) + " The highest slot seen by a replica is " + str(h_slot) + " seen by : " + str(h_s_rep))
+        inv_catchup = True
+      else:
+        logger.info(str(self) + " Catching up need not be done ")
+        inv_catchup = False
+
+      logger.info(str(self) + " Beginning catch up process")
+      logger.info(str(self) + "The Wedged replies received are %s", self.wedged_replies[r][1])
+      if(inv_catchup == True):
+        for r in self.wedged_replies:
+          if r != h_s_rep:
+            #calculate the difference
+            longest_h = self.wedged_replies[h_s_rep][0]
+            cmp_h = self.wedged_replies[r][0]
+            if len(self.wedged_replies[r][1]) != 0:
+              cmp_s = list(self.wedged_replies[r][1])[0]
+            else:
+              cmp_s = 0
+            catch_up_hist = {}
+            h_f = 0
+            s_h = 0
+            t_h = 0
+            if(len(cmp_h) == 0):
+              if cmp_s == max_cp:
+                t_h == 1
+                output("Has max checkpoint and completely truncated history")
+            for rid in longest_h:
+              if s_h == 0:
+                if (int(longest_h[rid].split(';')[1]) + 1) <= cmp_s:
+                  output("skipping history " + longest_h[rid])
+                  continue
+                else:
+                  s_h = 1
+              if h_f == 0 and rid in cmp_h:
+                output("both have " + longest_h[rid])
+                continue
+              else:
+                h_f = 1
+              if h_f == 1:
+                catch_up_hist[rid] = longest_h[rid]
+            logger.info(str(self) + " Catchup instructions for " + str(r) + " are: %s", catch_up_hist)
+            logger.info(str(self) + " Sending catch up instruction to : " + str(r))
+            send(('catch_up', catch_up_hist), to = r)
+            send(('catch_up',{}), to = h_s_rep)
+      else:
+        catch_up_hist = {}
+        for r in self.wedged_replies:
+          send(('catch_up', catch_up_hist), to = r)
+
+      await(self.caught_up == len(self.wedged_replies))
+      logger.info(str(self) + " Received all caught up messages")
+      logger.info(str(self) + " Verifying new Hashes")
+      logger.info(str(self) + " Number of hashesh received is " + str(len(self.caught_up_hash)))
+      logger.info(str(self) + "Printing all hashes : %s" , self.caught_up_hash)
+      logger.info(str(self) + "Received final states are : %s", self.caught_up_states)
+      hash_f = 0
+      correct_h = 0
+      for r in self.caught_up_hash:
+        if hash_f == 0:
+          temp = self.caught_up_hash[r]
+          temp_s = self.caught_up_states[r]
+          correct_h = correct_h + 1
+          hash_f = 1
+        else:
+          if temp == self.caught_up_hash[r]:
+            correct_h = correct_h + 1
+            temp_s = self.caught_up_states[r]
+
+      if correct_h >= int(conf['t'])+1 :
+        logger.info(str(self) + "Found enough correct hashes to start reconfiguration")
+        logger.info(str(self) + "Starting new configuration")
+        self.curr_config = self.curr_config + 1
+        create_replicas(temp_s)
+        logger.info(str(self) + "Reconfiguration complete")
+
+        for c_id in self.clientKeyMap:
+          logger.info(str(self) + "Sending new configuration to client : " + str(c_id))
+          send(('new_config', self.curr_config, self.replicaKeyMap, self.replicas), to = c_id)
+        self.reconfig_flag = 0
+
+      else:
+        logger.info(str(self) + "Couldn't get enough correct hashes.. Ideally get new quorum")
+
+
+  def receive(msg = ('caught_up', new_hash, db), from_ = r_id):
+    self.caught_up = self.caught_up + 1
+    self.caught_up_hash[r_id] = new_hash
+    self.caught_up_states[r_id] = db
+    logger.info(str(self) + "Received caught up from.. " + str(r_id))
+    logger.info(str(self) + "Its final state is : %s " , db)
+
+  def receive(msg = ('get_public_key_maps'), from_ = p_id):
+    logger.info("received get_public_key_maps message from: "+ str(p_id))
+    logger.info("sending public key maps to :" + str(p_id))
+    send(('public_key_maps', self.clientKeyMap, self.replicaKeyMap), to = p_id)
+
+  def receive(msg = ('getConfig', p), from_ = client_id):
+    logger.info("received getConfig message from :" + str(client_id))
+    output("Sending current config to : ", client_id)
+    logger.info("Sending current config to: " + str(client_id))
+    send(('currentConfig', self.replicas), to = client_id)
+
+  def receive(msg = ('generate_keys'), from_=client_id):
+    logger.info("received generate_keys message from: "+str(client_id))
+    pri_key = nacl.signing.SigningKey.generate()
+    pub_key = pri_key.verify_key
+    self.clientKeyMap[client_id] = pub_key
+    logger.info("generating and sending private key to : " + str(client_id))
+    send(('generated_key', pri_key), to = client_id)
+
+  def receive(msg = ('get_chain_info'), from_ = replica_id):
+    logger.info("received get_chain_info message from : "+str(replica_id))
+    rep = list(self.replicas)
+    headReplica = rep[0]
+    for i in range(0, len(rep)):
+      if(rep[i] == replica_id):
+        break
+    if (i == 0):
+      logger.info("sending back chain info to " + str(replica_id))
+      send(('val_chain_info', None, rep[i+1], headReplica), to = replica_id)
+    elif (i == (len(rep) - 1)):
+      logger.info("sending back chain info to " + str(replica_id))
+      send(('val_chain_info', rep[i - 1], None, headReplica), to = replica_id)
+    else:
+      logger.info("sending back chain info to " + str(replica_id))
+      send(('val_chain_info', rep[i - 1], rep[i+1], headReplica), to = replica_id)
+
+  def receive(msg = ('wedged_reply', rid, hist, cp), from_=p_id):
+    logger.info(str(self) + " received wedged reply from " + str(p_id))
+    self.wedged_replies[rid] = [hist, cp]
+
+  def receive(msg = ('reconfiguration', cc), from_=p_id):
+    if(self.curr_config == cc and self.reconfig_flag == 0):
+      for r in self.replicas:
+        send(('wedge_request'), to = r)
+      self.reconfig_flag = 1
+      logger.info(str(self) + " Received reconfiguration request from " + str(p_id))
+
+    else:
+      output("Reconfiguration underway for the received config value. Ignoring request")
+      logger.info(str(self) + " Reconfiguration is underway ignoring request")
+
+  def receive(msg = ('need_new_config', cfg), from_=c_id):
+    if self.curr_config > cfg:
+      send(('new_config', self.curr_config, self.replicaKeyMap, self.replicas), to = c_id)
+
+  def create_replicas(start_st):
+    num_replicas = 2 * conf['t'] + 1
+    logger.info("Creating replicas. Number = " + str(num_replicas))
+    self.replicas = new(replica.Replica, num = num_replicas)
+    output(self.replicas)
+    cnt = 0
+    self.replicaKeyMap = {}
+    if self.curr_config in self.failures:
+      failureCases = self.failures[self.curr_config]
+    else:
+      failureCases = {}
+
+    for r in self.replicas:
+      logger.info("setting up keys and starting replica: "+str(r))
+      pri_key = nacl.signing.SigningKey.generate()
+      pub_key = pri_key.verify_key
+      self.replicaKeyMap[r] = pub_key
+      if(cnt == 0):
+        if(cnt in failureCases):
+          setup(r, (conf, True, False, pri_key, cni, failureCases[cnt], self.curr_config, start_st,self))
+        else:
+          setup(r, (conf, True, False, pri_key, cni, None, self.curr_config, start_st,self))
+
+      elif(cnt == (len(self.replicas) - 1)):
+        if(cnt in failureCases):
+          setup(r, (conf, False, True, pri_key, cni, failureCases[cnt], self.curr_config, start_st,self))
+        else:
+          setup(r, (conf, False, True, pri_key, cni, None, self.curr_config, start_st, self))
+
+      else:
+        if(cnt in failureCases):
+          setup(r, (conf, False, False, pri_key, cni, failureCases[cnt], self.curr_config, start_st,self))
+        else:
+          setup(r, (conf, False, False, pri_key, cni, None, self.curr_config, start_st,self))
+
+      start(r)
+      cnt = cnt + 1

@@ -1,0 +1,127 @@
+2017-10-25 02:11:35 INFO     <Replica:33407> Getting chain info from olympus
+2017-10-25 02:11:35 INFO     <Replica:33405> Getting chain info from olympus
+2017-10-25 02:11:35 INFO     <Replica:33406> Getting chain info from olympus
+2017-10-25 02:11:35 INFO     <Replica:33407> getting public key maps from olympus
+2017-10-25 02:11:35 INFO     <Replica:33405> getting public key maps from olympus
+2017-10-25 02:11:35 INFO     <Replica:33407> Parsing failures
+2017-10-25 02:11:35 INFO     <Replica:33405> Parsing failures
+2017-10-25 02:11:35 INFO     <Replica:33407> None
+2017-10-25 02:11:35 INFO     <Replica:33405> None
+2017-10-25 02:11:35 INFO     <Replica:33406> getting public key maps from olympus
+2017-10-25 02:11:35 INFO     <Replica:33406> Parsing failures
+2017-10-25 02:11:35 INFO     <Replica:33406> None
+2017-10-25 02:11:35 INFO     <Replica:33407> Received put(movie,star)from<Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33402>;0 is <Replica:33407>;0;put;movie;star
+2017-10-25 02:11:35 INFO     <Replica:33407> Received put(movie,star)from<Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received put(movie,star) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33403>;0 is <Replica:33407>;1;put;movie;star
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33402>;0is: <Replica:33405>;0;put;movie;star
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received put(movie,star) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received put(movie,star) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33403>;0is: <Replica:33405>;1;put;movie;star
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33402>;0is: <Replica:33406>;0;put;movie;star
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending the result shuttle to client: <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33406> send the result shuttle back in the chain to: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received put(movie,star) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33403>;0is: <Replica:33406>;1;put;movie;star
+2017-10-25 02:11:35 INFO     <Replica:33406> sending the result shuttle to client: <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33406> send the result shuttle back in the chain to: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received slice(['movie', 'wars']) from: <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33402>;1is: <Replica:33407>;2;append;movie;wars
+2017-10-25 02:11:35 INFO     <Replica:33407> sending order shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received slice(['movie', 'wars']) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33402>;1is: <Replica:33405>;2;append;movie;wars
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received put(jedi,luke skywalker)from<Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33403>;1 is <Replica:33407>;3;put;jedi;luke skywalker
+2017-10-25 02:11:35 INFO     <Replica:33406> Received slice(['movie', 'wars']) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33402>;1is: <Replica:33406>;2;append;movie;wars
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle to <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle back to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received put(jedi,luke skywalker) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33403>;1is: <Replica:33405>;3;put;jedi;luke skywalker
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received put(jedi,luke skywalker) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33403>;1is: <Replica:33406>;3;put;jedi;luke skywalker
+2017-10-25 02:11:35 INFO     <Replica:33407> Received get(movie) from: <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33402>;2is: <Replica:33407>;4;get;movie
+2017-10-25 02:11:35 INFO     <Replica:33406> sending the result shuttle to client: <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33407> sending order shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> send the result shuttle back in the chain to: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received get(movie) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33402>;2is: <Replica:33405>;4;get;movie
+2017-10-25 02:11:35 INFO     <Replica:33407> Received put(hsdf,ksladjf)from<Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33403>;2 is <Replica:33407>;5;put;hsdf;ksladjf
+2017-10-25 02:11:35 INFO     <Replica:33406> Received get(movie) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33402>;2is: <Replica:33406>;4;get;movie
+2017-10-25 02:11:35 INFO     <Replica:33406> sending order shuttle forward to <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received put(hsdf,ksladjf) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33403>;2is: <Replica:33405>;5;put;hsdf;ksladjf
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received put(hsdf,ksladjf) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received put(jedi,luke skywalker)from<Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33402>;3 is <Replica:33407>;6;put;jedi;luke skywalker
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33403>;2is: <Replica:33406>;5;put;hsdf;ksladjf
+2017-10-25 02:11:35 INFO     <Replica:33406> sending the result shuttle to client: <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received put(jedi,luke skywalker) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33406> send the result shuttle back in the chain to: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33402>;3is: <Replica:33405>;6;put;jedi;luke skywalker
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received put(jedi,luke skywalker) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received get(movie) from: <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33402>;3is: <Replica:33406>;6;put;jedi;luke skywalker
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33403>;3is: <Replica:33407>;7;get;movie
+2017-10-25 02:11:35 INFO     <Replica:33406> sending the result shuttle to client: <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33407> sending order shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> send the result shuttle back in the chain to: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received get(movie) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33403>;3is: <Replica:33405>;7;get;movie
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received slice(['jedi', '0:4']) from: <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33402>;4is: <Replica:33407>;8;slice;jedi;0:4
+2017-10-25 02:11:35 INFO     <Replica:33407> sending order shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received get(movie) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received slice(['jedi', '0:4']) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33403>;3is: <Replica:33406>;7;get;movie
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33402>;4is: <Replica:33405>;8;slice;jedi;0:4
+2017-10-25 02:11:35 INFO     <Replica:33406> sending order shuttle forward to <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received slice(['jedi', '0:4']) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33402>;4is: <Replica:33406>;8;slice;jedi;0:4
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle to <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle back to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received slice(['jedi', '0:4']) from: <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33403>;4is: <Replica:33407>;9;slice;jedi;0:4
+2017-10-25 02:11:35 INFO     <Replica:33407> sending order shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received get(jedi) from: <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received slice(['jedi', '0:4']) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33402>;5is: <Replica:33407>;10;get;jedi
+2017-10-25 02:11:35 INFO     <Replica:33407> sending order shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33403>;4is: <Replica:33405>;9;slice;jedi;0:4
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received get(jedi) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received slice(['jedi', '0:4']) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33402>;5is: <Replica:33405>;10;get;jedi
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33403>;4is: <Replica:33406>;9;slice;jedi;0:4
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle to <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle back to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received get(jedi) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33402>;5is: <Replica:33406>;10;get;jedi
+2017-10-25 02:11:35 INFO     <Replica:33406> sending order shuttle forward to <Client:33402>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33407> Received slice(['movie', 'wars']) from: <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33407> The order statement for <Client:33403>;5is: <Replica:33407>;11;append;movie;wars
+2017-10-25 02:11:35 INFO     <Replica:33407> sending order shuttle forward to <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33405> Received slice(['movie', 'wars']) from: <Replica:33407>
+2017-10-25 02:11:35 INFO     <Replica:33405> The order statement for <Client:33403>;5is: <Replica:33405>;11;append;movie;wars
+2017-10-25 02:11:35 INFO     <Replica:33405> sending order shuttle forward to <Replica:33406>
+2017-10-25 02:11:35 INFO     <Replica:33406> Received slice(['movie', 'wars']) from: <Replica:33405>
+2017-10-25 02:11:35 INFO     <Replica:33406> The order statement for <Client:33403>;5is: <Replica:33406>;11;append;movie;wars
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle to <Client:33403>
+2017-10-25 02:11:35 INFO     <Replica:33406> sending result shuttle back to <Replica:33405>

@@ -1,0 +1,16 @@
+test_case_name = failure_free_large
+t = 2
+num_client = 10
+client_timeout = 3000
+head_timeout = 3000
+nonhead_timeout = 3000
+workload[0] = pseudorandom(23,90)
+workload[1] = pseudorandom(123, 90)
+workload[2] = pseudorandom(12, 84)
+workload[3] = pseudorandom(467, 68)
+workload[4] = pseudorandom(6575, 130)
+workload[5] = pseudorandom(234, 120)
+workload[6] = pseudorandom(3456, 100)
+workload[7] = pseudorandom(89, 23)
+workload[8] = pseudorandom(90, 34)
+workload[9] = pseudorandom(1345,99)

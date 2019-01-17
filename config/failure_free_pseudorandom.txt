@@ -1,0 +1,8 @@
+test_case_name = failure_free_pseudorandom
+t = 1
+num_client = 1
+client_timeout = 3000
+head_timeout = 3000
+nonhead_timeout = 3000
+checkpt_interval = 4
+workload[0] = pseudorandom(23,25)

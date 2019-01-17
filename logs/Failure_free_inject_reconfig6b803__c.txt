@@ -1,0 +1,26 @@
+2017-11-22 23:46:48 INFO     <Client:6b803> sending get config request to olympus
+2017-11-22 23:46:48 INFO     <Client:6b803> sending generate key request to olympus
+2017-11-22 23:46:48 INFO     <Client:6b803> getting public key map from olympus
+2017-11-22 23:46:48 INFO     <Client:6b803> received public key map from olympus
+2017-11-22 23:46:48 INFO     <Client:6b803> the workload is : ["get('movie')", "get('movie')", "put('disco', 'dandiyaan')", "get('movie')", "get('movie')", "append('matrix', 'anderson')"]
+2017-11-22 23:46:48 INFO     <Client:6b803> sending get operation with movie to head :<Replica:6b807>
+2017-11-22 23:46:48 INFO     <Client:6b803> received result shuttle from :<Replica:6b805>
+2017-11-22 23:46:48 INFO     <Client:6b803> the result for :<Client:6b803>;0 is star
+2017-11-22 23:46:48 INFO     <Client:6b803> sending get operation with movie to head :<Replica:6b807>
+2017-11-22 23:46:48 INFO     <Client:6b803> received result shuttle from :<Replica:6b805>
+2017-11-22 23:46:48 INFO     <Client:6b803> the result for :<Client:6b803>;1 is star
+2017-11-22 23:46:48 INFO     <Client:6b803> sending put operation with 'disco', 'dandiyaan' to head :<Replica:6b807>
+2017-11-22 23:46:48 INFO     <Client:6b803> received result shuttle from :<Replica:6b805>
+2017-11-22 23:46:48 INFO     <Client:6b803> the result for :<Client:6b803>;2 is OK
+2017-11-22 23:46:48 INFO     <Client:6b803> sending get operation with movie to head :<Replica:6b807>
+2017-11-22 23:46:48 INFO     <Client:6b803> Received new configuration
+2017-11-22 23:46:48 INFO     <Client:6b803> New head is : <Replica:6b808>
+2017-11-22 23:46:48 INFO     <Client:6b803> Current Config is : 1
+2017-11-22 23:46:53 INFO     <Client:6b803> Request lost in reconfig : get('movie')
+2017-11-22 23:46:53 INFO     <Client:6b803> sending get operation with movie to head :<Replica:6b808>
+2017-11-22 23:46:53 INFO     <Client:6b803> received result shuttle from :<Replica:6b809>
+2017-11-22 23:46:53 INFO     <Client:6b803> the result for :<Client:6b803>;4 is star
+2017-11-22 23:46:53 INFO     <Client:6b803> sending append operation with ['matrix', 'anderson'] to head :<Replica:6b808>
+2017-11-22 23:46:53 INFO     <Client:6b803> received result shuttle from :<Replica:6b809>
+2017-11-22 23:46:53 INFO     <Client:6b803> the result for :<Client:6b803>;5 is OK
+2017-11-22 23:46:53 INFO     <Client:6b803>The final state is: {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks', 'matrix': 'neo anderson'}

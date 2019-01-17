@@ -1,0 +1,27 @@
+2017-11-22 23:46:48 INFO     <Replica:6b80a> Created for configuration : 1 with state : {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}
+2017-11-22 23:46:48 INFO     <Replica:6b80a> Getting chain info from olympus
+2017-11-22 23:46:48 INFO     <Replica:6b80a> getting public key maps from olympus
+2017-11-22 23:46:48 INFO     <Replica:6b80a> Parsing failures
+2017-11-22 23:46:48 INFO     Client_request : {}
+2017-11-22 23:46:48 INFO     Forwarded Request : {}
+2017-11-22 23:46:48 INFO     Shuttle : {}
+2017-11-22 23:46:48 INFO     Result Shuttle : {}
+2017-11-22 23:46:48 INFO     Wedge Request : {}
+2017-11-22 23:46:48 INFO     New Configuration : {}
+2017-11-22 23:46:48 INFO     Checkpoint : {}
+2017-11-22 23:46:48 INFO     Complete Checkpoint : {}
+2017-11-22 23:46:48 INFO     Get Running State : {}
+2017-11-22 23:46:48 INFO     Catch Up : {}
+2017-11-22 23:46:48 INFO     <Replica:6b80a> None
+2017-11-22 23:46:50 INFO     <Replica:6b80a> Received put(matrix,neo) from: <Replica:6b808>
+2017-11-22 23:46:50 INFO     <Replica:6b80a> The order statement for <Client:6b802>;5is: <Replica:6b80a>;0;put;matrix;neo
+2017-11-22 23:46:50 INFO     <Replica:6b80a> sending order shuttle forward to <Replica:6b809>
+2017-11-22 23:46:53 INFO     <Replica:6b80a> Received get(movie) from: <Replica:6b808>
+2017-11-22 23:46:53 INFO     <Replica:6b80a> The order statement for <Client:6b803>;4is: <Replica:6b80a>;1;get;movie
+2017-11-22 23:46:53 INFO     <Replica:6b80a> sending order shuttle forward to <Replica:6b809>
+2017-11-22 23:46:53 INFO     <Replica:6b80a>Received checkpoint shuttle from <Replica:6b808>
+2017-11-22 23:46:53 INFO     <Replica:6b80a>sending checkpoint proof forward to <Replica:6b809>
+2017-11-22 23:46:53 INFO     <Replica:6b80a>Truncated the history
+2017-11-22 23:46:53 INFO     <Replica:6b80a> Received append(['matrix', 'anderson']) from: <Replica:6b808>
+2017-11-22 23:46:53 INFO     <Replica:6b80a> The order statement for <Client:6b803>;5is: <Replica:6b80a>;2;append;matrix;anderson
+2017-11-22 23:46:53 INFO     <Replica:6b80a> sending order shuttle forward to <Replica:6b809>

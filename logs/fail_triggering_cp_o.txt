@@ -1,0 +1,91 @@
+2017-11-22 23:47:37 INFO     {0: <Client:fb803>, 1: <Client:fb802>}
+2017-11-22 23:47:37 INFO     Created public and private keys for self
+2017-11-22 23:47:37 INFO     Creating replicas. Number = 3
+2017-11-22 23:47:37 INFO     setting up keys and starting replica: <Replica:fb806>
+2017-11-22 23:47:37 INFO     setting up keys and starting replica: <Replica:fb807>
+2017-11-22 23:47:37 INFO     setting up keys and starting replica: <Replica:fb805>
+2017-11-22 23:47:37 INFO     received getConfig message from :<Client:fb803>
+2017-11-22 23:47:37 INFO     Sending current config to: <Client:fb803>
+2017-11-22 23:47:37 INFO     received getConfig message from :<Client:fb802>
+2017-11-22 23:47:37 INFO     Sending current config to: <Client:fb802>
+2017-11-22 23:47:37 INFO     received get_chain_info message from : <Replica:fb806>
+2017-11-22 23:47:37 INFO     sending back chain info to <Replica:fb806>
+2017-11-22 23:47:37 INFO     received get_chain_info message from : <Replica:fb807>
+2017-11-22 23:47:37 INFO     sending back chain info to <Replica:fb807>
+2017-11-22 23:47:37 INFO     received get_chain_info message from : <Replica:fb805>
+2017-11-22 23:47:37 INFO     sending back chain info to <Replica:fb805>
+2017-11-22 23:47:37 INFO     received generate_keys message from: <Client:fb803>
+2017-11-22 23:47:37 INFO     generating and sending private key to : <Client:fb803>
+2017-11-22 23:47:37 INFO     received generate_keys message from: <Client:fb802>
+2017-11-22 23:47:37 INFO     generating and sending private key to : <Client:fb802>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Replica:fb806>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Replica:fb806>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Replica:fb805>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Replica:fb805>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Client:fb803>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Client:fb803>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Replica:fb807>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Replica:fb807>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Client:fb802>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Client:fb802>
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Received reconfiguration request from <Replica:fb806>
+2017-11-22 23:47:37 INFO     <Olympus:fb804> received wedged reply from <Replica:fb806>
+2017-11-22 23:47:37 INFO     <Olympus:fb804> received wedged reply from <Replica:fb805>
+2017-11-22 23:47:37 INFO     <Olympus:fb804> received wedged reply from <Replica:fb807>
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Wedged Replies are {<Replica:fb806>: [{'<Client:fb803>;2': '<Replica:fb806>;4;put;SingleMalt;Whiskey', '<Client:fb802>;2': '<Replica:fb806>;5;put;disco;dandiyaan', '<Replica:fb806>6': '<Replica:fb806>;6;put;jedi;skywalker', '<Replica:fb806>7': '<Replica:fb806>;7;put;sith;jarjarbinks'}, {4: [b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb']}], <Replica:fb805>: [{'<Client:fb803>;2': '<Replica:fb805>;4;put;SingleMalt;Whiskey', '<Client:fb802>;2': '<Replica:fb805>;5;put;disco;dandiyaan'}, {4: [b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb']}], <Replica:fb807>: [{'<Client:fb803>;2': '<Replica:fb807>;4;put;SingleMalt;Whiskey', '<Client:fb802>;2': '<Replica:fb807>;5;put;disco;dandiyaan'}, {4: [b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb']}]}
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Reconfiguration underway
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Validating Individual histories
+2017-11-22 23:47:37 INFO     <Olympus:fb804> History for : <Replica:fb806> is : {'<Client:fb803>;2': '<Replica:fb806>;4;put;SingleMalt;Whiskey', '<Client:fb802>;2': '<Replica:fb806>;5;put;disco;dandiyaan', '<Replica:fb806>6': '<Replica:fb806>;6;put;jedi;skywalker', '<Replica:fb806>7': '<Replica:fb806>;7;put;sith;jarjarbinks'}
+2017-11-22 23:47:37 INFO     <Olympus:fb804> History for : <Replica:fb805> is : {'<Client:fb803>;2': '<Replica:fb805>;4;put;SingleMalt;Whiskey', '<Client:fb802>;2': '<Replica:fb805>;5;put;disco;dandiyaan'}
+2017-11-22 23:47:37 INFO     <Olympus:fb804> History for : <Replica:fb807> is : {'<Client:fb803>;2': '<Replica:fb807>;4;put;SingleMalt;Whiskey', '<Client:fb802>;2': '<Replica:fb807>;5;put;disco;dandiyaan'}
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Getting highest checkpoint
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last Checkpoint for : <Replica:fb806> is : 4
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last Checkpoint for : <Replica:fb805> is : 4
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last Checkpoint for : <Replica:fb807> is : 4
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Highest Checkpoint : 4
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Getting highest slot seen by replica
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last os for <Replica:fb806>is : <Replica:fb806>;7;put;sith;jarjarbinks
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last Slot seen by <Replica:fb806>is : 7
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last os for <Replica:fb805>is : <Replica:fb805>;5;put;disco;dandiyaan
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last Slot seen by <Replica:fb805>is : 5
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last os for <Replica:fb807>is : <Replica:fb807>;5;put;disco;dandiyaan
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Last Slot seen by <Replica:fb807>is : 5
+2017-11-22 23:47:37 INFO     <Olympus:fb804> The highest slot seen by a replica is 7 seen by : <Replica:fb806>
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Beginning catch up process
+2017-11-22 23:47:37 INFO     <Olympus:fb804>The Wedged replies received are {4: [b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb', b'f83d466f060f9c0ecfdebf52903924669b5f5c880b8a2d9e17430531c7135acb']}
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Catchup instructions for <Replica:fb805> are: {'<Replica:fb806>6': '<Replica:fb806>;6;put;jedi;skywalker', '<Replica:fb806>7': '<Replica:fb806>;7;put;sith;jarjarbinks'}
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Sending catch up instruction to : <Replica:fb805>
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Catchup instructions for <Replica:fb807> are: {'<Replica:fb806>6': '<Replica:fb806>;6;put;jedi;skywalker', '<Replica:fb806>7': '<Replica:fb806>;7;put;sith;jarjarbinks'}
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Sending catch up instruction to : <Replica:fb807>
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Received caught up from.. <Replica:fb805>
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Its final state is : {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'} 
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Received caught up from.. <Replica:fb806>
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Its final state is : {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'} 
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Received caught up from.. <Replica:fb807>
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Its final state is : {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'} 
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Received all caught up messages
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Verifying new Hashes
+2017-11-22 23:47:37 INFO     <Olympus:fb804> Number of hashesh received is 3
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Printing all hashes : {<Replica:fb805>: b'2b51774032799f1a5d30c823f36631b12c0706b023e61243e399730dc24e8643', <Replica:fb806>: b'2b51774032799f1a5d30c823f36631b12c0706b023e61243e399730dc24e8643', <Replica:fb807>: b'2b51774032799f1a5d30c823f36631b12c0706b023e61243e399730dc24e8643'}
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Received final states are : {<Replica:fb805>: {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}, <Replica:fb806>: {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}, <Replica:fb807>: {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}}
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Found enough correct hashes to start reconfiguration
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Starting new configuration
+2017-11-22 23:47:37 INFO     Creating replicas. Number = 3
+2017-11-22 23:47:37 INFO     setting up keys and starting replica: <Replica:fb809>
+2017-11-22 23:47:37 INFO     setting up keys and starting replica: <Replica:fb80a>
+2017-11-22 23:47:37 INFO     setting up keys and starting replica: <Replica:fb808>
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Reconfiguration complete
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Sending new configuration to client : <Client:fb803>
+2017-11-22 23:47:37 INFO     <Olympus:fb804>Sending new configuration to client : <Client:fb802>
+2017-11-22 23:47:37 INFO     received get_chain_info message from : <Replica:fb809>
+2017-11-22 23:47:37 INFO     sending back chain info to <Replica:fb809>
+2017-11-22 23:47:37 INFO     received get_chain_info message from : <Replica:fb80a>
+2017-11-22 23:47:37 INFO     sending back chain info to <Replica:fb80a>
+2017-11-22 23:47:37 INFO     received get_chain_info message from : <Replica:fb808>
+2017-11-22 23:47:37 INFO     sending back chain info to <Replica:fb808>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Replica:fb809>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Replica:fb809>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Replica:fb80a>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Replica:fb80a>
+2017-11-22 23:47:37 INFO     received get_public_key_maps message from: <Replica:fb808>
+2017-11-22 23:47:37 INFO     sending public key maps to :<Replica:fb808>

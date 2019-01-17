@@ -1,0 +1,41 @@
+2017-11-22 23:47:37 INFO     <Replica:fb806> Created for configuration : 0 with state : {}
+2017-11-22 23:47:37 INFO     <Replica:fb806> Getting chain info from olympus
+2017-11-22 23:47:37 INFO     <Replica:fb806> getting public key maps from olympus
+2017-11-22 23:47:37 INFO     <Replica:fb806> Parsing failures
+2017-11-22 23:47:37 INFO     Client_request : {}
+2017-11-22 23:47:37 INFO     Forwarded Request : {}
+2017-11-22 23:47:37 INFO     Shuttle : {}
+2017-11-22 23:47:37 INFO     Result Shuttle : {}
+2017-11-22 23:47:37 INFO     Wedge Request : {}
+2017-11-22 23:47:37 INFO     New Configuration : {}
+2017-11-22 23:47:37 INFO     Checkpoint : {}
+2017-11-22 23:47:37 INFO     Complete Checkpoint : {}
+2017-11-22 23:47:37 INFO     Get Running State : {}
+2017-11-22 23:47:37 INFO     Catch Up : {}
+2017-11-22 23:47:37 INFO     <Replica:fb806> None
+2017-11-22 23:47:37 INFO     <Replica:fb806> Received put(movie,star)from<Client:fb803>
+2017-11-22 23:47:37 INFO     <Replica:fb806> The order statement for <Client:fb803>;0 is <Replica:fb806>;0;put;movie;star
+2017-11-22 23:47:37 INFO     <Replica:fb806> Received get(movie) from: <Client:fb802>
+2017-11-22 23:47:37 INFO     <Replica:fb806> The order statement for <Client:fb802>;0is: <Replica:fb806>;1;get;movie
+2017-11-22 23:47:37 INFO     <Replica:fb806> sending order shuttle forward to <Replica:fb807>
+2017-11-22 23:47:37 INFO     <Replica:fb806> Checkpoint reached sending proof to successor
+2017-11-22 23:47:37 INFO     <Replica:fb806> Received put(SBU,NYC)from<Client:fb803>
+2017-11-22 23:47:37 INFO     <Replica:fb806> The order statement for <Client:fb803>;1 is <Replica:fb806>;2;put;SBU;NYC
+2017-11-22 23:47:37 INFO     <Replica:fb806> Received get(SBU) from: <Client:fb802>
+2017-11-22 23:47:37 INFO     <Replica:fb806> The order statement for <Client:fb802>;1is: <Replica:fb806>;3;get;SBU
+2017-11-22 23:47:37 INFO     <Replica:fb806> sending order shuttle forward to <Replica:fb807>
+2017-11-22 23:47:37 INFO     <Replica:fb806> Checkpoint reached sending proof to successor
+2017-11-22 23:47:37 INFO     <Replica:fb806>Truncated the history
+2017-11-22 23:47:37 INFO     <Replica:fb806> Received put(SingleMalt,Whiskey)from<Client:fb803>
+2017-11-22 23:47:37 INFO     <Replica:fb806> The order statement for <Client:fb803>;2 is <Replica:fb806>;4;put;SingleMalt;Whiskey
+2017-11-22 23:47:37 INFO     <Replica:fb806> Received put(disco,dandiyaan)from<Client:fb802>
+2017-11-22 23:47:37 INFO     <Replica:fb806> The order statement for <Client:fb802>;2 is <Replica:fb806>;5;put;disco;dandiyaan
+2017-11-22 23:47:37 INFO     <Replica:fb806> Checkpoint reached sending proof to successor
+2017-11-22 23:47:37 INFO     <Replica:fb806>Truncated the history
+2017-11-22 23:47:37 INFO     <Replica:fb806> Wedged request received
+2017-11-22 23:47:37 INFO     <Replica:fb806> Sending response for wedge request
+2017-11-22 23:47:37 INFO     <Replica:fb806> Received get(movie) from: <Client:fb802>
+2017-11-22 23:47:37 INFO     <Replica:fb806>Catch_up message received
+2017-11-22 23:47:37 INFO     <Replica:fb806> Catch up history is: {}
+2017-11-22 23:47:37 INFO     <Replica:fb806> Catching up successful. sending back caught up message. New state is : {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}
+2017-11-22 23:47:37 INFO     <Replica:fb806> Caught_up hash sent

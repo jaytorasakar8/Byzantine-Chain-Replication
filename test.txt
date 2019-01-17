@@ -1,0 +1,54 @@
+test_case_name = perform900
+Configuration: As mentioned on Blackboard
+command to run:
+python3 -m da startup.da ../config/performace_testing.txt
+
+test_case_name = failure_free_small_test
+Configuration : 3 replicas, 2 clients, no failures, small workload
+command to run :
+python3 -m da startup.da ../config/failure_free_small_test.txt
+
+test_case_name = failure_free_pseudorandom.txt
+Configuration: 3 replicas, 1 client, pseudoramdom workload, no failures
+command to run:
+python3 -m da startup.da ../config/failure_free_pseudorandom.txt
+
+test_case_name = failure_free_large_test
+Configuration : 5 replicas, 10 clients, pseudoramdom workload, no failures
+command to run:
+python3 -m da startup.da ../config/failure_free_large_test.txt
+
+test_case_name = with_failures_small.txt
+Configuration: 3 replicas, 2 clients, small workload, 1 replica has failures
+command to run:
+python3 -m da startup.da ../config/with_failure_small.txt
+
+test_case_name = with_failures_small.txt
+Configuration: 3 replicas, 2 clients, medium workload, 3 replica have failures
+command to run:
+python3 -m da startup.da ../config/with_failures_large.txt
+
+test_case_name = fail_triggering_wedge_request.txt
+Configuration: 3 replicas, 2 clients, small workload
+command to run:
+python3 -m da startup.da ../config/fail_triggering_wedge_request.txt
+
+test_case_name = fail_triggering_new_config
+Configuration: 3 replicas, 2 clients, small workload
+command to run:
+python3 -m da startup.da ../config/fail_triggering_new_config.txt
+
+test_case_name = fail_triggering_cp
+Configuration: 3 replicas, 2 clients, small workload
+command to run:
+python3 -m da startup.da ../config/fail_triggering_cp.txt
+
+test_case_name = fail_triggering_completed_cp
+Configuration: 3 replicas, 2 clients, small workload
+command to run:
+python3 -m da startup.da ../config/fail_triggering_completed_cp.txt
+
+test_case_name = failure_free_inject_reconfig
+Configuration: 3 replicas, 2 clients, small workload
+command to run:
+python3 -m da startup.da ../config/failure_free_inject_reconfig.txt

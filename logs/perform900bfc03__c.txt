@@ -1,0 +1,907 @@
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending get config request to olympus
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending generate key request to olympus
+2017-11-23 00:07:03 INFO     <Client:bfc03> getting public key map from olympus
+2017-11-23 00:07:03 INFO     <Client:bfc03> received public key map from olympus
+2017-11-23 00:07:03 INFO     <Client:bfc03> the workload is : ['pseudorandom(190,300)']
+2017-11-23 00:07:03 INFO     <Client:bfc03> generating the pseudo random workload
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending put operation with 'julie','rope' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;0 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending put operation with 'kraft','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;1 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['rope', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;2 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending append operation with ['alleviate', 'kraft'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;3 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;4 is 
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['questioning', '6:11'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;5 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending put operation with 'sven','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;6 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['quilting', '2:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;7 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['quilting', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;8 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending append operation with ['bakersfield', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;9 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['sven', '1:1'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;10 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending append operation with ['rope', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;11 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending put operation with 'kraft','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;12 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['alleviate', '5:8'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;13 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['alleviate', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;14 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending put operation with 'sven','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;15 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending append operation with ['julie', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;16 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending append operation with ['quilting', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;17 is FAIL
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending slice operation with ['kraft', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     <Client:bfc03> the result for :<Client:bfc03>;18 is OK
+2017-11-23 00:07:03 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;19 is 
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending get operation with quilting to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;20 is 
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['rope', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;21 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['alleviate', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;22 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending get operation with julie to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;23 is rope importance
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'julie','importance' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;24 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['bakersfield', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;25 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending slice operation with ['maintainer', '1:10'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;26 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['bakersfield', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;27 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending slice operation with ['rope', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;28 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'playoffs','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;29 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'questioning','julie' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;30 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'sven','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;31 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'bakersfield','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;32 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['alleviate', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;33 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;34 is 
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending get operation with quilting to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;35 is 
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending get operation with playoffs to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;36 is playoffs
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;37 is 
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'quilting','importance' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;38 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'rope','importance' to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;39 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending get operation with alleviate to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;40 is 
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending slice operation with ['kraft', '3:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;41 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['alleviate', 'bakersfield'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;42 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['quilting', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;43 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending slice operation with ['maintainer', '8:10'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;44 is FAIL
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending append operation with ['bakersfield', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:04 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:04 INFO     <Client:bfc03> the result for :<Client:bfc03>;45 is OK
+2017-11-23 00:07:04 INFO     <Client:bfc03> sending put operation with 'importance','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;46 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending put operation with 'quilting','alleviate' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;47 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;48 is sven
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending append operation with ['importance', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;49 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with quilting to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;50 is alleviate
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending slice operation with ['julie', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;51 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending slice operation with ['maintainer', '3:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;52 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending append operation with ['alleviate', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;53 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending slice operation with ['importance', '1:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;54 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending append operation with ['maintainer', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;55 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending put operation with 'alleviate','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;56 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending append operation with ['importance', 'questioning'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;57 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending put operation with 'questioning','alleviate' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;58 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;59 is 
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending slice operation with ['alleviate', '3:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;60 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with kraft to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;61 is ues
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending put operation with 'quilting','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;62 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending slice operation with ['kraft', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;63 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending append operation with ['sven', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;64 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with importance to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;65 is layoffs  questioning
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending slice operation with ['bakersfield', '4:10'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;66 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with alleviate to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;67 is 
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending put operation with 'alleviate','kraft' to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;68 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with playoffs to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;69 is playoffs
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;70 is sven rope
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending slice operation with ['playoffs', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;71 is OK
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;72 is sven rope
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with rope to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;73 is importance
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending append operation with ['boxed', 'kraft'] to head :<Replica:bfc08>
+2017-11-23 00:07:05 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:05 INFO     <Client:bfc03> the result for :<Client:bfc03>;74 is FAIL
+2017-11-23 00:07:05 INFO     <Client:bfc03> sending get operation with maintainer to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;75 is 
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'julie','rope' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;76 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'boxed','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;77 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with quilting to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;78 is playoffs
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with julie to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;79 is rope
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'importance','importance' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;80 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with questioning to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;81 is alleviate
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with bakersfield to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;82 is offs b
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'boxed','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;83 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with quilting to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;84 is playoffs
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending slice operation with ['quilting', '1:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;85 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending slice operation with ['kraft', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;86 is FAIL
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending append operation with ['importance', 'kraft'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;87 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with playoffs to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;88 is a
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with bakersfield to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;89 is offs b
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with playoffs to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;90 is a
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;91 is quilting
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending slice operation with ['kraft', '2:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;92 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending slice operation with ['sven', '1:1'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;93 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending slice operation with ['importance', '4:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;94 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'bakersfield','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;95 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with alleviate to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;96 is kraft
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending slice operation with ['importance', '2:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;97 is FAIL
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'boxed','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;98 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;99 is playoffs
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'kraft','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;100 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending slice operation with ['boxed', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;101 is OK
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending get operation with alleviate to head :<Replica:bfc08>
+2017-11-23 00:07:06 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:06 INFO     <Client:bfc03> the result for :<Client:bfc03>;102 is kraft
+2017-11-23 00:07:06 INFO     <Client:bfc03> sending put operation with 'bakersfield','alleviate' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;103 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'questioning','kraft' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;104 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['rope', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;105 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending get operation with alleviate to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;106 is kraft
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['questioning', '3:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;107 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['julie', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;108 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['rope', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;109 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'maintainer','alleviate' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;110 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['rope', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;111 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'boxed','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;112 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending get operation with bakersfield to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;113 is alleviate
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['bakersfield', '9:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;114 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['maintainer', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;115 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['alleviate', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;116 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'playoffs','importance' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;117 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['questioning', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;118 is FAIL
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['rope', '2:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;119 is FAIL
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'quilting','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;120 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'julie','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;121 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['boxed', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;122 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'questioning','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;123 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['importance', '5:8'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;124 is FAIL
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['kraft', '2:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;125 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending slice operation with ['rope', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;126 is FAIL
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['quilting', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;127 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['kraft', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;128 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending put operation with 'julie','rope' to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;129 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;130 is quilting maintainer
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['questioning', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:07 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:07 INFO     <Client:bfc03> the result for :<Client:bfc03>;131 is OK
+2017-11-23 00:07:07 INFO     <Client:bfc03> sending append operation with ['quilting', 'alleviate'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;132 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['bakersfield', 'questioning'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;133 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['alleviate', 'quilting'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;134 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['rope', 'alleviate'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;135 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending slice operation with ['julie', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;136 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending slice operation with ['bakersfield', '1:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;137 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending get operation with bakersfield to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;138 is quest
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['maintainer', 'alleviate'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;139 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending put operation with 'importance','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;140 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending put operation with 'quilting','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;141 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['julie', 'julie'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;142 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['sven', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;143 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['sven', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;144 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;145 is quilting maintainer
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending put operation with 'julie','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;146 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['sven', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;147 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending slice operation with ['sven', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;148 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending get operation with rope to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;149 is a alleviate
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending append operation with ['julie', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;150 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending get operation with bakersfield to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;151 is quest
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending put operation with 'bakersfield','kraft' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;152 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending slice operation with ['maintainer', '2:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;153 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending get operation with kraft to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;154 is est maintainer
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending put operation with 'bakersfield','maintainer' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;155 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending slice operation with ['rope', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;156 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;157 is rop
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending slice operation with ['importance', '3:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;158 is FAIL
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending put operation with 'playoffs','importance' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;159 is OK
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending slice operation with ['rope', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:08 INFO     <Client:bfc03> the result for :<Client:bfc03>;160 is FAIL
+2017-11-23 00:07:08 INFO     <Client:bfc03> sending put operation with 'rope','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:08 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;161 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending append operation with ['questioning', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;162 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending get operation with kraft to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;163 is est maintainer
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending get operation with bakersfield to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;164 is maintainer
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending get operation with maintainer to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;165 is levia
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['quilting', '3:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;166 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['quilting', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;167 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending append operation with ['questioning', 'alleviate'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;168 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending get operation with importance to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;169 is sven
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending put operation with 'maintainer','rope' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;170 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending put operation with 'maintainer','rope' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;171 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['playoffs', '5:8'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;172 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending append operation with ['sven', 'bakersfield'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;173 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending put operation with 'boxed','julie' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;174 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending append operation with ['importance', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;175 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending append operation with ['quilting', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;176 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['boxed', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;177 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending get operation with playoffs to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;178 is tan
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending put operation with 'julie','julie' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;179 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['importance', '3:10'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;180 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['sven', '4:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;181 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending get operation with quilting to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;182 is sven importance
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending append operation with ['sven', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;183 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending put operation with 'maintainer','boxed' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;184 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['playoffs', '3:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;185 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending append operation with ['julie', 'kraft'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;186 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['importance', '1:10'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;187 is FAIL
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending slice operation with ['julie', '5:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:09 INFO     <Client:bfc03> the result for :<Client:bfc03>;188 is OK
+2017-11-23 00:07:09 INFO     <Client:bfc03> sending put operation with 'sven','alleviate' to head :<Replica:bfc08>
+2017-11-23 00:07:09 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;189 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending put operation with 'boxed','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;190 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending put operation with 'kraft','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;191 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;192 is alleviate
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending put operation with 'boxed','bakersfield' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;193 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['quilting', '4:8'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;194 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['rope', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;195 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending put operation with 'importance','alleviate' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;196 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['questioning', '1:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;197 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;198 is bakersfield
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending append operation with ['playoffs', 'questioning'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;199 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending get operation with importance to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;200 is alleviate
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['rope', '2:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;201 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;202 is alleviate
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending put operation with 'boxed','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;203 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending append operation with ['importance', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;204 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending get operation with rope to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;205 is en
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['playoffs', '1:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;206 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending append operation with ['alleviate', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;207 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;208 is questioning
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['rope', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;209 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['maintainer', '4:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;210 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['importance', '4:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;211 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['alleviate', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;212 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending slice operation with ['alleviate', '1:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;213 is FAIL
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending put operation with 'questioning','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:10 INFO     <Client:bfc03> the result for :<Client:bfc03>;214 is OK
+2017-11-23 00:07:10 INFO     <Client:bfc03> sending put operation with 'sven','boxed' to head :<Replica:bfc08>
+2017-11-23 00:07:10 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;215 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'julie','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;216 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'kraft','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;217 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['bakersfield', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;218 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending slice operation with ['playoffs', '5:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;219 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending slice operation with ['boxed', '1:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;220 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['quilting', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;221 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'rope','maintainer' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;222 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending get operation with importance to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;223 is viate
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending slice operation with ['bakersfield', '6:11'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;224 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending slice operation with ['questioning', '5:7'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;225 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending slice operation with ['rope', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;226 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['alleviate', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;227 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending slice operation with ['alleviate', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;228 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'bakersfield','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;229 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['julie', 'alleviate'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;230 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending get operation with importance to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;231 is viate
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'sven','bakersfield' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;232 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['importance', 'sven'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;233 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'playoffs','alleviate' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;234 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending get operation with kraft to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;235 is quilting
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending get operation with kraft to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;236 is quilting
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending get operation with boxed to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;237 is ue
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'julie','kraft' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;238 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'kraft','importance' to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;239 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['boxed', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;240 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['importance', 'questioning'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;241 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending append operation with ['alleviate', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:11 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:11 INFO     <Client:bfc03> the result for :<Client:bfc03>;242 is OK
+2017-11-23 00:07:11 INFO     <Client:bfc03> sending put operation with 'maintainer','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;243 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['importance', 'quilting'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;244 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending put operation with 'playoffs','questioning' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;245 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['questioning', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;246 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['julie', 'kraft'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;247 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;248 is bakersfield
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['julie', '1:2'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;249 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['boxed', 'sven'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;250 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['boxed', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;251 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['rope', 'bakersfield'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;252 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending put operation with 'maintainer','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;253 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending get operation with julie to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;254 is r
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['maintainer', 'questioning'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;255 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['boxed', '5:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;256 is FAIL
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending put operation with 'julie','maintainer' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;257 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending get operation with rope to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;258 is n bakersfield
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending get operation with questioning to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;259 is io maintainer
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending put operation with 'alleviate','julie' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;260 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending put operation with 'julie','quilting' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;261 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['playoffs', 'maintainer'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;262 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['rope', 'rope'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;263 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['bakersfield', '3:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;264 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['sven', '3:3'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;265 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['kraft', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;266 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending put operation with 'rope','kraft' to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;267 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['boxed', '5:5'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;268 is FAIL
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending append operation with ['bakersfield', 'bakersfield'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;269 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending slice operation with ['playoffs', '2:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:12 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:12 INFO     <Client:bfc03> the result for :<Client:bfc03>;270 is OK
+2017-11-23 00:07:12 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;271 is 
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['alleviate', 'quilting'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;272 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['maintainer', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;273 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending slice operation with ['quilting', '5:6'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;274 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['kraft', 'boxed'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;275 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending put operation with 'alleviate','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;276 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['boxed', 'playoffs'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;277 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending put operation with 'importance','playoffs' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;278 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['quilting', 'bakersfield'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;279 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with alleviate to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;280 is sven
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending slice operation with ['alleviate', '5:9'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;281 is FAIL
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['playoffs', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;282 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['rope', 'sven'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;283 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with julie to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;284 is quilting
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with kraft to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;285 is po boxed
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending slice operation with ['julie', '3:4'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;286 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending slice operation with ['quilting', '7:8'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;287 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['rope', 'kraft'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;288 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending put operation with 'playoffs','bakersfield' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;289 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with importance to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;290 is playoffs
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with bakersfield to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;291 is yof bakersfield
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with playoffs to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;292 is bakersfield
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with kraft to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;293 is po boxed
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['kraft', 'importance'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;294 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending put operation with 'kraft','julie' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;295 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with rope to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;296 is kraft sven kraft
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending append operation with ['rope', 'kraft'] to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;297 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending put operation with 'rope','sven' to head :<Replica:bfc08>
+2017-11-23 00:07:13 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:13 INFO     <Client:bfc03> the result for :<Client:bfc03>;298 is OK
+2017-11-23 00:07:13 INFO     <Client:bfc03> sending get operation with sven to head :<Replica:bfc08>
+2017-11-23 00:07:14 INFO     <Client:bfc03> received result shuttle from :<Replica:bfc09>
+2017-11-23 00:07:14 INFO     <Client:bfc03> the result for :<Client:bfc03>;299 is 
+2017-11-23 00:07:14 INFO     <Client:bfc03>The final state is: {'julie': 'l', 'runners': 'endorsement supp transporting endorsement supp positions erickson', 'kraft': 'julie', 'endorsement': 'spoken endorsement', 'moines': 'bl escorts', 'sven': '', 'communion': 'y sesame', 'bl': 'positions bl', 'extracting': 'bl', 'burning': 'sesame', 'transporting': 'escorts endorsement supp', 'consult': 'chubby', 'playoffs': 'bakersfield', 'erickson': 'runners', 'questioning': 'io maintainer', 'bakersfield': 'yof bakersfield', 'lungs': 'r library burning', 'subscribers': 'tra', 'quilting': 's', 'rope': 'sven', 'library': 'consult scrapbooking', 'ireland': 'consult consult', 'cultivated': 'chubby', 'importance': 'playoffs', 'alleviate': 'sven', 'escorts': '', 'spoken': 'e', 'boxed': 'p playoffs', 'scrapbooking': 'communion', 'supp': 'moines', 'sesame': 'scrapbooking', 'omissions': 'chubby', 'maintainer': 'quilting questioning importance', 'lac': '', 'positions': 'sport', 'chubby': 'u'}

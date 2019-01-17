@@ -1,0 +1,121 @@
+2017-10-25 02:23:50 INFO     <Replica:89007> Getting chain info from olympus
+2017-10-25 02:23:50 INFO     <Replica:89005> Getting chain info from olympus
+2017-10-25 02:23:50 INFO     <Replica:89006> Getting chain info from olympus
+2017-10-25 02:23:50 INFO     <Replica:89007> getting public key maps from olympus
+2017-10-25 02:23:50 INFO     <Replica:89007> Parsing failures
+2017-10-25 02:23:50 INFO     <Replica:89007> None
+2017-10-25 02:23:50 INFO     <Replica:89005> getting public key maps from olympus
+2017-10-25 02:23:50 INFO     <Replica:89005> Parsing failures
+2017-10-25 02:23:50 INFO     <Replica:89006> getting public key maps from olympus
+2017-10-25 02:23:50 INFO     <Replica:89006> Parsing failures
+2017-10-25 02:23:50 INFO     <Replica:89006> ['shuttle(1, 3), drop_result_statement()']
+2017-10-25 02:23:50 INFO     <Replica:89007> Received put(tasty,tasty)from<Client:89002>
+2017-10-25 02:23:50 INFO     <Replica:89007> The order statement for <Client:89002>;0 is <Replica:89007>;0;put;tasty;tasty
+2017-10-25 02:23:50 INFO     <Replica:89007> Received get(paraguay) from: <Client:89003>
+2017-10-25 02:23:50 INFO     <Replica:89007> The order statement for <Client:89003>;0is: <Replica:89007>;1;get;paraguay
+2017-10-25 02:23:50 INFO     <Replica:89007> sending order shuttle forward to <Replica:89005>
+2017-10-25 02:23:53 INFO     <Replica:89007> Received put(tasty,tasty)from<Client:89002>
+2017-10-25 02:23:53 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:23:53 INFO     <Replica:89006> Received put(tasty,tasty)from<Client:89002>
+2017-10-25 02:23:53 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:23:53 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:23:53 INFO     <Replica:89006> Received get(paraguay) from: <Client:89003>
+2017-10-25 02:23:53 INFO     <Replica:89007> Received get(paraguay) from: <Client:89003>
+2017-10-25 02:23:53 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:23:53 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:23:53 INFO     <Replica:89007> Received put(nichols,attainment)from<Client:89003>
+2017-10-25 02:23:53 INFO     <Replica:89007> The order statement for <Client:89003>;1 is <Replica:89007>;2;put;nichols;attainment
+2017-10-25 02:23:56 INFO     <Replica:89007> Received put(tasty,tasty)from<Client:89002>
+2017-10-25 02:23:56 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:23:56 INFO     <Replica:89006> Received put(tasty,tasty)from<Client:89002>
+2017-10-25 02:23:56 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:23:56 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:23:56 INFO     <Replica:89006> Received put(nichols,attainment)from<Client:89003>
+2017-10-25 02:23:56 INFO     <Replica:89007> Received put(nichols,attainment)from<Client:89003>
+2017-10-25 02:23:56 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:23:56 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:23:56 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:23:56 INFO     <Replica:89007> Received get(material) from: <Client:89002>
+2017-10-25 02:23:56 INFO     <Replica:89007> The order statement for <Client:89002>;1is: <Replica:89007>;3;get;material
+2017-10-25 02:23:56 INFO     <Replica:89007> sending order shuttle forward to <Replica:89005>
+2017-10-25 02:23:59 INFO     <Replica:89007> Received get(material) from: <Client:89002>
+2017-10-25 02:23:59 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:23:59 INFO     <Replica:89006> Received put(nichols,attainment)from<Client:89003>
+2017-10-25 02:23:59 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:23:59 INFO     <Replica:89006> Received get(material) from: <Client:89002>
+2017-10-25 02:23:59 INFO     <Replica:89007> Received put(nichols,attainment)from<Client:89003>
+2017-10-25 02:23:59 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:23:59 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:23:59 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:23:59 INFO     <Replica:89007> Received put(decreases,decreases)from<Client:89003>
+2017-10-25 02:23:59 INFO     <Replica:89007> The order statement for <Client:89003>;2 is <Replica:89007>;4;put;decreases;decreases
+2017-10-25 02:23:59 INFO     <Replica:89007> Received put(allowances,prepaid)from<Client:89002>
+2017-10-25 02:23:59 INFO     <Replica:89007> The order statement for <Client:89002>;2 is <Replica:89007>;5;put;allowances;prepaid
+2017-10-25 02:24:02 INFO     <Replica:89007> Received put(allowances,prepaid)from<Client:89002>
+2017-10-25 02:24:02 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:24:02 INFO     <Replica:89006> Received put(decreases,decreases)from<Client:89003>
+2017-10-25 02:24:02 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:02 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:02 INFO     <Replica:89007> Received put(decreases,decreases)from<Client:89003>
+2017-10-25 02:24:02 INFO     <Replica:89006> Received put(allowances,prepaid)from<Client:89002>
+2017-10-25 02:24:02 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:24:02 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:02 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:05 INFO     <Replica:89007> Received put(decreases,decreases)from<Client:89003>
+2017-10-25 02:24:05 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:24:05 INFO     <Replica:89006> Received put(decreases,decreases)from<Client:89003>
+2017-10-25 02:24:05 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:05 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:05 INFO     <Replica:89006> Received put(allowances,prepaid)from<Client:89002>
+2017-10-25 02:24:05 INFO     <Replica:89007> Received put(allowances,prepaid)from<Client:89002>
+2017-10-25 02:24:05 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:24:05 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:05 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:05 INFO     <Replica:89007> Received slice(['nichols', 'basement']) from: <Client:89003>
+2017-10-25 02:24:05 INFO     <Replica:89007> The order statement for <Client:89003>;3is: <Replica:89007>;6;append;nichols;basement
+2017-10-25 02:24:05 INFO     <Replica:89007> sending order shuttle forward to <Replica:89005>
+2017-10-25 02:24:05 INFO     <Replica:89007> Received get(yuan) from: <Client:89002>
+2017-10-25 02:24:05 INFO     <Replica:89007> The order statement for <Client:89002>;3is: <Replica:89007>;7;get;yuan
+2017-10-25 02:24:05 INFO     <Replica:89007> sending order shuttle forward to <Replica:89005>
+2017-10-25 02:24:08 INFO     <Replica:89007> Received slice(['nichols', 'basement']) from: <Client:89003>
+2017-10-25 02:24:08 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:08 INFO     <Replica:89006> Received get(yuan) from: <Client:89002>
+2017-10-25 02:24:08 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:08 INFO     <Replica:89006> Received slice(['nichols', 'basement']) from: <Client:89003>
+2017-10-25 02:24:08 INFO     <Replica:89007> Received get(yuan) from: <Client:89002>
+2017-10-25 02:24:08 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:08 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:08 INFO     <Replica:89007> Received slice(['large', 'osama']) from: <Client:89002>
+2017-10-25 02:24:08 INFO     <Replica:89007> The order statement for <Client:89002>;4is: <Replica:89007>;8;append;large;osama
+2017-10-25 02:24:08 INFO     <Replica:89007> sending order shuttle forward to <Replica:89005>
+2017-10-25 02:24:08 INFO     <Replica:89007> Received put(promoter,basement)from<Client:89003>
+2017-10-25 02:24:08 INFO     <Replica:89007> The order statement for <Client:89003>;4 is <Replica:89007>;9;put;promoter;basement
+2017-10-25 02:24:11 INFO     <Replica:89007> Received slice(['large', 'osama']) from: <Client:89002>
+2017-10-25 02:24:11 INFO     <Replica:89006> Received put(promoter,basement)from<Client:89003>
+2017-10-25 02:24:11 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:11 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:11 INFO     <Replica:89006> Received slice(['large', 'osama']) from: <Client:89002>
+2017-10-25 02:24:11 INFO     <Replica:89007> Received put(promoter,basement)from<Client:89003>
+2017-10-25 02:24:11 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:24:11 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:11 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:14 INFO     <Replica:89007> Received put(promoter,basement)from<Client:89003>
+2017-10-25 02:24:14 INFO     <Replica:89007> received the broadcast from client.
+2017-10-25 02:24:14 INFO     <Replica:89006> Received put(promoter,basement)from<Client:89003>
+2017-10-25 02:24:14 INFO     <Replica:89007> result is not in cache
+2017-10-25 02:24:14 INFO     <Replica:89007> waiting for the result shuttle to come back
+2017-10-25 02:24:17 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:17 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:20 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:20 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:23 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:23 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:26 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:26 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:29 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:29 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:32 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:32 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:35 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:35 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus
+2017-10-25 02:24:38 INFO     <Replica:89007> timed out. Becomes immutable and sends the reconfiguration request to olympus

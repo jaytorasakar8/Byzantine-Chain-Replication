@@ -1,0 +1,30 @@
+2017-10-25 02:23:50 INFO     {0: <Client:89002>, 1: <Client:89003>}
+2017-10-25 02:23:50 INFO     Created public and private keys for self
+2017-10-25 02:23:50 INFO     Creating replicas. Number = 3
+2017-10-25 02:23:50 INFO     setting up keys and starting replica: <Replica:89007>
+2017-10-25 02:23:50 INFO     setting up keys and starting replica: <Replica:89005>
+2017-10-25 02:23:50 INFO     setting up keys and starting replica: <Replica:89006>
+2017-10-25 02:23:50 INFO     received getConfig message from :<Client:89002>
+2017-10-25 02:23:50 INFO     Sending current config to: <Client:89002>
+2017-10-25 02:23:50 INFO     received getConfig message from :<Client:89003>
+2017-10-25 02:23:50 INFO     Sending current config to: <Client:89003>
+2017-10-25 02:23:50 INFO     received get_chain_info message from : <Replica:89007>
+2017-10-25 02:23:50 INFO     sending back chain info to <Replica:89007>
+2017-10-25 02:23:50 INFO     received get_chain_info message from : <Replica:89005>
+2017-10-25 02:23:50 INFO     sending back chain info to <Replica:89005>
+2017-10-25 02:23:50 INFO     received get_chain_info message from : <Replica:89006>
+2017-10-25 02:23:50 INFO     sending back chain info to <Replica:89006>
+2017-10-25 02:23:50 INFO     received generate_keys message from: <Client:89002>
+2017-10-25 02:23:50 INFO     generating and sending private key to : <Client:89002>
+2017-10-25 02:23:50 INFO     received generate_keys message from: <Client:89003>
+2017-10-25 02:23:50 INFO     generating and sending private key to : <Client:89003>
+2017-10-25 02:23:50 INFO     received get_public_key_maps message from: <Replica:89007>
+2017-10-25 02:23:50 INFO     sending public key maps to :<Replica:89007>
+2017-10-25 02:23:50 INFO     received get_public_key_maps message from: <Replica:89005>
+2017-10-25 02:23:50 INFO     sending public key maps to :<Replica:89005>
+2017-10-25 02:23:50 INFO     received get_public_key_maps message from: <Replica:89006>
+2017-10-25 02:23:50 INFO     sending public key maps to :<Replica:89006>
+2017-10-25 02:23:50 INFO     received get_public_key_maps message from: <Client:89002>
+2017-10-25 02:23:50 INFO     sending public key maps to :<Client:89002>
+2017-10-25 02:23:50 INFO     received get_public_key_maps message from: <Client:89003>
+2017-10-25 02:23:50 INFO     sending public key maps to :<Client:89003>

@@ -1,0 +1,129 @@
+2017-10-25 02:15:22 INFO     <Replica:b1804> Getting chain info from olympus
+2017-10-25 02:15:22 INFO     <Replica:b1806> Getting chain info from olympus
+2017-10-25 02:15:22 INFO     <Replica:b1805> Getting chain info from olympus
+2017-10-25 02:15:22 INFO     <Replica:b1804> getting public key maps from olympus
+2017-10-25 02:15:22 INFO     <Replica:b1806> getting public key maps from olympus
+2017-10-25 02:15:22 INFO     <Replica:b1804> Parsing failures
+2017-10-25 02:15:22 INFO     <Replica:b1804> None
+2017-10-25 02:15:22 INFO     <Replica:b1806> Parsing failures
+2017-10-25 02:15:22 INFO     <Replica:b1806> None
+2017-10-25 02:15:22 INFO     <Replica:b1805> getting public key maps from olympus
+2017-10-25 02:15:22 INFO     <Replica:b1805> Parsing failures
+2017-10-25 02:15:22 INFO     <Replica:b1805> None
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received get(space) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;0is: <Replica:b1804>;0;get;space
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received get(space) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;0is: <Replica:b1806>;0;get;space
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received get(space) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;0is: <Replica:b1805>;0;get;space
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending order shuttle forward to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received slice(['vodka', 'bulletin']) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;1is: <Replica:b1804>;1;append;vodka;bulletin
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received slice(['vodka', 'bulletin']) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;1is: <Replica:b1806>;1;append;vodka;bulletin
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received slice(['vodka', 'bulletin']) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;1is: <Replica:b1805>;1;append;vodka;bulletin
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle back to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received put(material,prepaid)from<Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;2 is <Replica:b1804>;2;put;material;prepaid
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received put(material,prepaid) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;2is: <Replica:b1806>;2;put;material;prepaid
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received put(material,prepaid) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;2is: <Replica:b1805>;2;put;material;prepaid
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending the result shuttle to client: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> send the result shuttle back in the chain to: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received slice(['brick', 'prepaid']) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;3is: <Replica:b1804>;3;append;brick;prepaid
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received slice(['brick', 'prepaid']) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;3is: <Replica:b1806>;3;append;brick;prepaid
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received slice(['brick', 'prepaid']) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;3is: <Replica:b1805>;3;append;brick;prepaid
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle back to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received slice(['misses', '3:6']) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;4is: <Replica:b1804>;4;slice;misses;3:6
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received slice(['misses', '3:6']) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;4is: <Replica:b1806>;4;slice;misses;3:6
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received slice(['misses', '3:6']) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;4is: <Replica:b1805>;4;slice;misses;3:6
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle back to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received get(large) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;5is: <Replica:b1804>;5;get;large
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received get(large) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;5is: <Replica:b1806>;5;get;large
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received get(large) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;5is: <Replica:b1805>;5;get;large
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending order shuttle forward to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received put(misses,brick)from<Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;6 is <Replica:b1804>;6;put;misses;brick
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received put(misses,brick) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;6is: <Replica:b1806>;6;put;misses;brick
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received put(misses,brick) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;6is: <Replica:b1805>;6;put;misses;brick
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending the result shuttle to client: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> send the result shuttle back in the chain to: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received put(vodka,material)from<Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;7 is <Replica:b1804>;7;put;vodka;material
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received put(vodka,material) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;7is: <Replica:b1806>;7;put;vodka;material
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received put(vodka,material) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;7is: <Replica:b1805>;7;put;vodka;material
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending the result shuttle to client: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> send the result shuttle back in the chain to: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received slice(['misses', '3:5']) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;8is: <Replica:b1804>;8;slice;misses;3:5
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received slice(['misses', '3:5']) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;8is: <Replica:b1806>;8;slice;misses;3:5
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received slice(['misses', '3:5']) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;8is: <Replica:b1805>;8;slice;misses;3:5
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle back to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received slice(['osama', 'space']) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;9is: <Replica:b1804>;9;append;osama;space
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received slice(['osama', 'space']) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;9is: <Replica:b1806>;9;append;osama;space
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received slice(['osama', 'space']) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;9is: <Replica:b1805>;9;append;osama;space
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle back to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received slice(['material', '2:8']) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;10is: <Replica:b1804>;10;slice;material;2:8
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received slice(['material', '2:8']) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;10is: <Replica:b1806>;10;slice;material;2:8
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received slice(['material', '2:8']) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;10is: <Replica:b1805>;10;slice;material;2:8
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle back to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1804> Received slice(['large', '4:5']) from: <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1804> The order statement for <Client:b1802>;11is: <Replica:b1804>;11;slice;large;4:5
+2017-10-25 02:15:22 INFO     <Replica:b1804> sending order shuttle forward to <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1806> Received slice(['large', '4:5']) from: <Replica:b1804>
+2017-10-25 02:15:22 INFO     <Replica:b1806> The order statement for <Client:b1802>;11is: <Replica:b1806>;11;slice;large;4:5
+2017-10-25 02:15:22 INFO     <Replica:b1806> sending order shuttle forward to <Replica:b1805>
+2017-10-25 02:15:22 INFO     <Replica:b1805> Received slice(['large', '4:5']) from: <Replica:b1806>
+2017-10-25 02:15:22 INFO     <Replica:b1805> The order statement for <Client:b1802>;11is: <Replica:b1805>;11;slice;large;4:5
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle to <Client:b1802>
+2017-10-25 02:15:22 INFO     <Replica:b1805> sending result shuttle back to <Replica:b1806>

@@ -1,0 +1,24 @@
+2017-10-25 02:21:03 INFO     <Client:1a403> sending get config request to olympus
+2017-10-25 02:21:03 INFO     <Client:1a402> sending get config request to olympus
+2017-10-25 02:21:04 INFO     <Client:1a403> sending generate key request to olympus
+2017-10-25 02:21:04 INFO     <Client:1a402> sending generate key request to olympus
+2017-10-25 02:21:04 INFO     <Client:1a403> getting public key map from olympus
+2017-10-25 02:21:04 INFO     <Client:1a402> getting public key map from olympus
+2017-10-25 02:21:04 INFO     <Client:1a403> received public key map from olympus
+2017-10-25 02:21:04 INFO     <Client:1a403> the workload is : ["put('movie', 'star')", "put('jedi', 'wars')"]
+2017-10-25 02:21:04 INFO     <Client:1a403> sending put operation with 'movie', 'star' to head
+2017-10-25 02:21:04 INFO     <Client:1a402> received public key map from olympus
+2017-10-25 02:21:04 INFO     <Client:1a402> the workload is : ["get('jedi')", "append('movie', 'wars')"]
+2017-10-25 02:21:04 INFO     <Client:1a402> sending get operation with jedi to head
+2017-10-25 02:21:04 INFO     <Client:1a403> received result shuttle from :<Replica:1a407>
+2017-10-25 02:21:04 INFO     <Client:1a403> the result for :<Client:1a403>;0 is OK
+2017-10-25 02:21:04 INFO     <Client:1a403> sending put operation with 'jedi', 'wars' to head
+2017-10-25 02:21:04 INFO     <Client:1a402> received result shuttle from :<Replica:1a407>
+2017-10-25 02:21:04 INFO     <Client:1a402> the result for :<Client:1a402>;0 is 
+2017-10-25 02:21:04 INFO     <Client:1a402> sending append operation with ['movie', 'wars'] to head
+2017-10-25 02:21:04 INFO     <Client:1a403> received result shuttle from :<Replica:1a407>
+2017-10-25 02:21:04 INFO     <Client:1a403> the result for :<Client:1a403>;1 is OK
+2017-10-25 02:21:04 INFO     <Client:1a403>The final state is: {'movie': 'star wars', 'jedi': 'wars'}
+2017-10-25 02:21:04 INFO     <Client:1a402> received result shuttle from :<Replica:1a407>
+2017-10-25 02:21:04 INFO     <Client:1a402> the result for :<Client:1a402>;1 is OK
+2017-10-25 02:21:04 INFO     <Client:1a402>The final state is: {'movie': 'star wars', 'jedi': 'wars'}

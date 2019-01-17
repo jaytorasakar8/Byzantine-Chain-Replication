@@ -1,0 +1,11 @@
+test_case_name = with_failures_large
+t = 1
+num_client = 2
+client_timeout = 3000
+head_timeout = 3000
+nonhead_timeout = 3000
+workload[0] = pseudorandom(23,5)
+workload[1] = pseudorandom(234,5)
+failures[0,1] = client_request(0, 1), change_operation();
+failures[0,2] = shuttle(1, 3), drop_result_statement()
+failures[0,3] = result_shuttle(0, 3), change_result()

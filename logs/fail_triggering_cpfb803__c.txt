@@ -1,0 +1,26 @@
+2017-11-22 23:47:37 INFO     <Client:fb803> sending get config request to olympus
+2017-11-22 23:47:37 INFO     <Client:fb803> sending generate key request to olympus
+2017-11-22 23:47:37 INFO     <Client:fb803> getting public key map from olympus
+2017-11-22 23:47:37 INFO     <Client:fb803> received public key map from olympus
+2017-11-22 23:47:37 INFO     <Client:fb803> the workload is : ["put('movie', 'star')", "put('SBU', 'NYC')", "put('SingleMalt', 'Whiskey')", 'reconfig', "put('JusticeLeague', 'WonderWoman')"]
+2017-11-22 23:47:37 INFO     <Client:fb803> sending put operation with 'movie', 'star' to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb803> received result shuttle from :<Replica:fb805>
+2017-11-22 23:47:37 INFO     <Client:fb803> the result for :<Client:fb803>;0 is OK
+2017-11-22 23:47:37 INFO     <Client:fb803> sending put operation with 'SBU', 'NYC' to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb803> received result shuttle from :<Replica:fb805>
+2017-11-22 23:47:37 INFO     <Client:fb803> the result for :<Client:fb803>;1 is OK
+2017-11-22 23:47:37 INFO     <Client:fb803> sending put operation with 'SingleMalt', 'Whiskey' to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb803> received result shuttle from :<Replica:fb805>
+2017-11-22 23:47:37 INFO     <Client:fb803> the result for :<Client:fb803>;2 is OK
+2017-11-22 23:47:37 INFO     <Client:fb803> Sending the reconfig trigger to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb803> Received immutable message from replica. Reconfig is underway.
+2017-11-22 23:47:37 INFO     <Client:fb803> Sending get_new_config request to Olympus
+2017-11-22 23:47:37 INFO     <Client:fb803> Received new configuration
+2017-11-22 23:47:37 INFO     <Client:fb803> New head is : <Replica:fb809>
+2017-11-22 23:47:37 INFO     <Client:fb803> Current Config is : 1
+2017-11-22 23:47:37 INFO     <Client:fb803> Waiting for the configuration to reboot
+2017-11-22 23:47:39 INFO     <Client:fb803> Exited the loop.
+2017-11-22 23:47:39 INFO     <Client:fb803> sending put operation with 'JusticeLeague', 'WonderWoman' to head :<Replica:fb809>
+2017-11-22 23:47:39 INFO     <Client:fb803> received result shuttle from :<Replica:fb808>
+2017-11-22 23:47:39 INFO     <Client:fb803> the result for :<Client:fb803>;4 is OK
+2017-11-22 23:47:39 INFO     <Client:fb803>The final state is: {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks', 'JusticeLeague': 'WonderWoman'}

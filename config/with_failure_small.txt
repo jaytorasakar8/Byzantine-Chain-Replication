@@ -1,0 +1,15 @@
+test_case_name = with_failure_small
+t = 1
+num_client = 2
+client_timeout = 3000
+head_timeout = 3000
+nonhead_timeout = 3000
+checkpt_interval = 10
+workload[0] = put('movie', 'star'); get('jedi')
+workload[1] = get('jedi'); append('movie', 'wars')
+#failures[0,0] = client_request(0, 2), change_result()
+#failures[0,1] = client_request(1, 2), crash();client_request(5, 3), crash()
+#failures[1,3] = forwarded_request(1, 3), change_result_statement()
+#failures[3,5] = forwarded_request(1, 3), change_result_statement();client_request(1, 2), crash()
+#failures[0,0] = checkpoint(1), crash(); checkpoint(2), truncate_history(n); checkpoint(2), sleep(2); checkpoint(3), drop(); checkpoint(3), increment_slot(); checkpoint(3), extra_op()
+failures[0,0] = checkpoint(1), crash()

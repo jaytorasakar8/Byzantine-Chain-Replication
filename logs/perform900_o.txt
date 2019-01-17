@@ -1,0 +1,46 @@
+2017-11-23 00:07:03 INFO     {0: <Client:bfc03>, 1: <Client:bfc02>, 2: <Client:bfc04>}
+2017-11-23 00:07:03 INFO     Created public and private keys for self
+2017-11-23 00:07:03 INFO     Creating replicas. Number = 5
+2017-11-23 00:07:03 INFO     setting up keys and starting replica: <Replica:bfc08>
+2017-11-23 00:07:03 INFO     setting up keys and starting replica: <Replica:bfc06>
+2017-11-23 00:07:03 INFO     setting up keys and starting replica: <Replica:bfc0a>
+2017-11-23 00:07:03 INFO     setting up keys and starting replica: <Replica:bfc07>
+2017-11-23 00:07:03 INFO     setting up keys and starting replica: <Replica:bfc09>
+2017-11-23 00:07:03 INFO     received getConfig message from :<Client:bfc03>
+2017-11-23 00:07:03 INFO     Sending current config to: <Client:bfc03>
+2017-11-23 00:07:03 INFO     received getConfig message from :<Client:bfc02>
+2017-11-23 00:07:03 INFO     Sending current config to: <Client:bfc02>
+2017-11-23 00:07:03 INFO     received getConfig message from :<Client:bfc04>
+2017-11-23 00:07:03 INFO     Sending current config to: <Client:bfc04>
+2017-11-23 00:07:03 INFO     received get_chain_info message from : <Replica:bfc08>
+2017-11-23 00:07:03 INFO     sending back chain info to <Replica:bfc08>
+2017-11-23 00:07:03 INFO     received get_chain_info message from : <Replica:bfc06>
+2017-11-23 00:07:03 INFO     sending back chain info to <Replica:bfc06>
+2017-11-23 00:07:03 INFO     received get_chain_info message from : <Replica:bfc0a>
+2017-11-23 00:07:03 INFO     sending back chain info to <Replica:bfc0a>
+2017-11-23 00:07:03 INFO     received get_chain_info message from : <Replica:bfc07>
+2017-11-23 00:07:03 INFO     sending back chain info to <Replica:bfc07>
+2017-11-23 00:07:03 INFO     received get_chain_info message from : <Replica:bfc09>
+2017-11-23 00:07:03 INFO     sending back chain info to <Replica:bfc09>
+2017-11-23 00:07:03 INFO     received generate_keys message from: <Client:bfc03>
+2017-11-23 00:07:03 INFO     generating and sending private key to : <Client:bfc03>
+2017-11-23 00:07:03 INFO     received generate_keys message from: <Client:bfc02>
+2017-11-23 00:07:03 INFO     generating and sending private key to : <Client:bfc02>
+2017-11-23 00:07:03 INFO     received generate_keys message from: <Client:bfc04>
+2017-11-23 00:07:03 INFO     generating and sending private key to : <Client:bfc04>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Replica:bfc08>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Replica:bfc08>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Replica:bfc06>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Replica:bfc06>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Replica:bfc0a>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Replica:bfc0a>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Replica:bfc07>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Replica:bfc07>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Replica:bfc09>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Replica:bfc09>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Client:bfc03>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Client:bfc03>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Client:bfc02>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Client:bfc02>
+2017-11-23 00:07:03 INFO     received get_public_key_maps message from: <Client:bfc04>
+2017-11-23 00:07:03 INFO     sending public key maps to :<Client:bfc04>

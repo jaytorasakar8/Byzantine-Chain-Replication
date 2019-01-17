@@ -1,0 +1,12 @@
+test_case_name = fail_triggering_new_config
+t = 1
+num_client = 2
+client_timeout = 3000
+olympus_timeout = 3000
+head_timeout = 3000
+nonhead_timeout = 3000
+checkpt_interval = 2
+workload[0] = put('movie', 'star');put('SBU', 'NYC');reconfig;put('SingleMalt', 'Whiskey');put('JusticeLeague', 'WonderWoman')
+workload[1] = get('movie');get('SBU');put('disco', 'dandiyaan');get('movie');get('movie');append('disco', 'aamir ')
+failures[1,0] = new_configuration(1), crash()
+#failures[0,1] = checkpoint(1), sleep(2000)

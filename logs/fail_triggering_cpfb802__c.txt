@@ -1,0 +1,30 @@
+2017-11-22 23:47:37 INFO     <Client:fb802> sending get config request to olympus
+2017-11-22 23:47:37 INFO     <Client:fb802> sending generate key request to olympus
+2017-11-22 23:47:37 INFO     <Client:fb802> getting public key map from olympus
+2017-11-22 23:47:37 INFO     <Client:fb802> received public key map from olympus
+2017-11-22 23:47:37 INFO     <Client:fb802> the workload is : ["get('movie')", "get('SBU')", "put('disco', 'dandiyaan')", "get('movie')", "get('movie')", "append('disco', 'aamir ')"]
+2017-11-22 23:47:37 INFO     <Client:fb802> sending get operation with movie to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb802> received result shuttle from :<Replica:fb805>
+2017-11-22 23:47:37 INFO     <Client:fb802> the result for :<Client:fb802>;0 is star
+2017-11-22 23:47:37 INFO     <Client:fb802> sending get operation with SBU to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb802> received result shuttle from :<Replica:fb805>
+2017-11-22 23:47:37 INFO     <Client:fb802> the result for :<Client:fb802>;1 is NYC
+2017-11-22 23:47:37 INFO     <Client:fb802> sending put operation with 'disco', 'dandiyaan' to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb802> received result shuttle from :<Replica:fb805>
+2017-11-22 23:47:37 INFO     <Client:fb802> the result for :<Client:fb802>;2 is OK
+2017-11-22 23:47:37 INFO     <Client:fb802> sending get operation with movie to head :<Replica:fb806>
+2017-11-22 23:47:37 INFO     <Client:fb802> Received immutable message from replica. Reconfig is underway.
+2017-11-22 23:47:37 INFO     <Client:fb802> Request lost in reconfig : get('movie')
+2017-11-22 23:47:37 INFO     <Client:fb802> Sending get_new_config request to Olympus
+2017-11-22 23:47:37 INFO     <Client:fb802> Received new configuration
+2017-11-22 23:47:37 INFO     <Client:fb802> New head is : <Replica:fb809>
+2017-11-22 23:47:37 INFO     <Client:fb802> Current Config is : 1
+2017-11-22 23:47:37 INFO     <Client:fb802> Waiting for the configuration to reboot
+2017-11-22 23:47:39 INFO     <Client:fb802> Exited the loop.
+2017-11-22 23:47:39 INFO     <Client:fb802> sending get operation with movie to head :<Replica:fb809>
+2017-11-22 23:47:39 INFO     <Client:fb802> received result shuttle from :<Replica:fb808>
+2017-11-22 23:47:39 INFO     <Client:fb802> the result for :<Client:fb802>;4 is star
+2017-11-22 23:47:39 INFO     <Client:fb802> sending append operation with ['disco', 'aamir '] to head :<Replica:fb809>
+2017-11-22 23:47:39 INFO     <Client:fb802> received result shuttle from :<Replica:fb808>
+2017-11-22 23:47:39 INFO     <Client:fb802> the result for :<Client:fb802>;5 is OK
+2017-11-22 23:47:39 INFO     <Client:fb802>The final state is: {'movie': 'star', 'SBU': 'NYC', 'SingleMalt': 'Whiskey', 'disco': 'dandiyaan aamir ', 'jedi': 'skywalker', 'sith': 'jarjarbinks', 'JusticeLeague': 'WonderWoman'}

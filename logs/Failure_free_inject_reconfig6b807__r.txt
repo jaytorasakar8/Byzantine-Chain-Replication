@@ -1,0 +1,47 @@
+2017-11-22 23:46:48 INFO     <Replica:6b807> Created for configuration : 0 with state : {}
+2017-11-22 23:46:48 INFO     <Replica:6b807> Getting chain info from olympus
+2017-11-22 23:46:48 INFO     <Replica:6b807> getting public key maps from olympus
+2017-11-22 23:46:48 INFO     <Replica:6b807> Parsing failures
+2017-11-22 23:46:48 INFO     Client_request : {}
+2017-11-22 23:46:48 INFO     Forwarded Request : {}
+2017-11-22 23:46:48 INFO     Shuttle : {}
+2017-11-22 23:46:48 INFO     Result Shuttle : {}
+2017-11-22 23:46:48 INFO     Wedge Request : {}
+2017-11-22 23:46:48 INFO     New Configuration : {}
+2017-11-22 23:46:48 INFO     Checkpoint : {}
+2017-11-22 23:46:48 INFO     Complete Checkpoint : {}
+2017-11-22 23:46:48 INFO     Get Running State : {}
+2017-11-22 23:46:48 INFO     Catch Up : {}
+2017-11-22 23:46:48 INFO     <Replica:6b807> None
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received put(movie,star)from<Client:6b802>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b802>;0 is <Replica:6b807>;0;put;movie;star
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received get(movie) from: <Client:6b803>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b803>;0is: <Replica:6b807>;1;get;movie
+2017-11-22 23:46:48 INFO     <Replica:6b807> sending order shuttle forward to <Replica:6b806>
+2017-11-22 23:46:48 INFO     <Replica:6b807> Checkpoint reached sending proof to successor
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received put(movie,star)from<Client:6b802>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b802>;1 is <Replica:6b807>;2;put;movie;star
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received get(movie) from: <Client:6b803>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b803>;1is: <Replica:6b807>;3;get;movie
+2017-11-22 23:46:48 INFO     <Replica:6b807> sending order shuttle forward to <Replica:6b806>
+2017-11-22 23:46:48 INFO     <Replica:6b807> Checkpoint reached sending proof to successor
+2017-11-22 23:46:48 INFO     <Replica:6b807>Truncated the history
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received put(movie,star)from<Client:6b802>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b802>;2 is <Replica:6b807>;4;put;movie;star
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received put(disco,dandiyaan)from<Client:6b803>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b803>;2 is <Replica:6b807>;5;put;disco;dandiyaan
+2017-11-22 23:46:48 INFO     <Replica:6b807> Checkpoint reached sending proof to successor
+2017-11-22 23:46:48 INFO     <Replica:6b807>Truncated the history
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received put(movie,star)from<Client:6b802>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b802>;3 is <Replica:6b807>;6;put;movie;star
+2017-11-22 23:46:48 INFO     <Replica:6b807> Received get(movie) from: <Client:6b803>
+2017-11-22 23:46:48 INFO     <Replica:6b807> The order statement for <Client:6b803>;3is: <Replica:6b807>;7;get;movie
+2017-11-22 23:46:48 INFO     <Replica:6b807> sending order shuttle forward to <Replica:6b806>
+2017-11-22 23:46:48 INFO     <Replica:6b807> Checkpoint reached sending proof to successor
+2017-11-22 23:46:48 INFO     <Replica:6b807>Truncated the history
+2017-11-22 23:46:48 INFO     <Replica:6b807> Wedged request received
+2017-11-22 23:46:48 INFO     <Replica:6b807> Sending response for wedge request
+2017-11-22 23:46:48 INFO     <Replica:6b807>Catch_up message received
+2017-11-22 23:46:48 INFO     <Replica:6b807> Catch up history is: {}
+2017-11-22 23:46:48 INFO     <Replica:6b807> Catching up successful. sending back caught up message. New state is : {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}
+2017-11-22 23:46:48 INFO     <Replica:6b807> Caught_up hash sent

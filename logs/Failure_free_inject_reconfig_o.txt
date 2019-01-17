@@ -1,0 +1,91 @@
+2017-11-22 23:46:48 INFO     {0: <Client:6b802>, 1: <Client:6b803>}
+2017-11-22 23:46:48 INFO     Created public and private keys for self
+2017-11-22 23:46:48 INFO     Creating replicas. Number = 3
+2017-11-22 23:46:48 INFO     setting up keys and starting replica: <Replica:6b807>
+2017-11-22 23:46:48 INFO     setting up keys and starting replica: <Replica:6b806>
+2017-11-22 23:46:48 INFO     setting up keys and starting replica: <Replica:6b805>
+2017-11-22 23:46:48 INFO     received getConfig message from :<Client:6b802>
+2017-11-22 23:46:48 INFO     Sending current config to: <Client:6b802>
+2017-11-22 23:46:48 INFO     received getConfig message from :<Client:6b803>
+2017-11-22 23:46:48 INFO     Sending current config to: <Client:6b803>
+2017-11-22 23:46:48 INFO     received get_chain_info message from : <Replica:6b807>
+2017-11-22 23:46:48 INFO     sending back chain info to <Replica:6b807>
+2017-11-22 23:46:48 INFO     received get_chain_info message from : <Replica:6b806>
+2017-11-22 23:46:48 INFO     sending back chain info to <Replica:6b806>
+2017-11-22 23:46:48 INFO     received generate_keys message from: <Client:6b802>
+2017-11-22 23:46:48 INFO     generating and sending private key to : <Client:6b802>
+2017-11-22 23:46:48 INFO     received generate_keys message from: <Client:6b803>
+2017-11-22 23:46:48 INFO     generating and sending private key to : <Client:6b803>
+2017-11-22 23:46:48 INFO     received get_chain_info message from : <Replica:6b805>
+2017-11-22 23:46:48 INFO     sending back chain info to <Replica:6b805>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Replica:6b807>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Replica:6b807>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Replica:6b806>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Replica:6b806>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Client:6b802>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Client:6b802>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Client:6b803>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Client:6b803>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Replica:6b805>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Replica:6b805>
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Received reconfiguration request from <Replica:6b807>
+2017-11-22 23:46:48 INFO     <Olympus:6b804> received wedged reply from <Replica:6b805>
+2017-11-22 23:46:48 INFO     <Olympus:6b804> received wedged reply from <Replica:6b807>
+2017-11-22 23:46:48 INFO     <Olympus:6b804> received wedged reply from <Replica:6b806>
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Wedged Replies are {<Replica:6b805>: [{'<Client:6b802>;3': '<Replica:6b805>;6;put;movie;star'}, {6: [b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d']}], <Replica:6b807>: [{'<Client:6b802>;3': '<Replica:6b807>;6;put;movie;star', '<Client:6b803>;3': '<Replica:6b807>;7;get;movie', '<Replica:6b807>8': '<Replica:6b807>;8;put;jedi;skywalker', '<Replica:6b807>9': '<Replica:6b807>;9;put;sith;jarjarbinks'}, {6: [b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d']}], <Replica:6b806>: [{'<Client:6b802>;3': '<Replica:6b806>;6;put;movie;star', '<Client:6b803>;3': '<Replica:6b806>;7;get;movie'}, {6: [b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d']}]}
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Reconfiguration underway
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Validating Individual histories
+2017-11-22 23:46:48 INFO     <Olympus:6b804> History for : <Replica:6b805> is : {'<Client:6b802>;3': '<Replica:6b805>;6;put;movie;star'}
+2017-11-22 23:46:48 INFO     <Olympus:6b804> History for : <Replica:6b807> is : {'<Client:6b802>;3': '<Replica:6b807>;6;put;movie;star', '<Client:6b803>;3': '<Replica:6b807>;7;get;movie', '<Replica:6b807>8': '<Replica:6b807>;8;put;jedi;skywalker', '<Replica:6b807>9': '<Replica:6b807>;9;put;sith;jarjarbinks'}
+2017-11-22 23:46:48 INFO     <Olympus:6b804> History for : <Replica:6b806> is : {'<Client:6b802>;3': '<Replica:6b806>;6;put;movie;star', '<Client:6b803>;3': '<Replica:6b806>;7;get;movie'}
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Getting highest checkpoint
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last Checkpoint for : <Replica:6b805> is : 6
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last Checkpoint for : <Replica:6b807> is : 6
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last Checkpoint for : <Replica:6b806> is : 6
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Highest Checkpoint : 6
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Getting highest slot seen by replica
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last os for <Replica:6b805>is : <Replica:6b805>;6;put;movie;star
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last Slot seen by <Replica:6b805>is : 6
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last os for <Replica:6b807>is : <Replica:6b807>;9;put;sith;jarjarbinks
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last Slot seen by <Replica:6b807>is : 9
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last os for <Replica:6b806>is : <Replica:6b806>;7;get;movie
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Last Slot seen by <Replica:6b806>is : 7
+2017-11-22 23:46:48 INFO     <Olympus:6b804> The highest slot seen by a replica is 9 seen by : <Replica:6b807>
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Beginning catch up process
+2017-11-22 23:46:48 INFO     <Olympus:6b804>The Wedged replies received are {6: [b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d', b'b8b18202a8e362a862c0d6b4234c9cabec2d650a390a1318917023f02983ed7d']}
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Catchup instructions for <Replica:6b805> are: {'<Client:6b803>;3': '<Replica:6b807>;7;get;movie', '<Replica:6b807>8': '<Replica:6b807>;8;put;jedi;skywalker', '<Replica:6b807>9': '<Replica:6b807>;9;put;sith;jarjarbinks'}
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Sending catch up instruction to : <Replica:6b805>
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Catchup instructions for <Replica:6b806> are: {'<Replica:6b807>8': '<Replica:6b807>;8;put;jedi;skywalker', '<Replica:6b807>9': '<Replica:6b807>;9;put;sith;jarjarbinks'}
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Sending catch up instruction to : <Replica:6b806>
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Received caught up from.. <Replica:6b805>
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Its final state is : {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'} 
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Received caught up from.. <Replica:6b807>
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Its final state is : {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'} 
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Received caught up from.. <Replica:6b806>
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Its final state is : {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'} 
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Received all caught up messages
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Verifying new Hashes
+2017-11-22 23:46:48 INFO     <Olympus:6b804> Number of hashesh received is 3
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Printing all hashes : {<Replica:6b805>: b'550d12791b5f84d82f292bb7d1316d30fda0824f72317ab066854edcc01559e5', <Replica:6b807>: b'550d12791b5f84d82f292bb7d1316d30fda0824f72317ab066854edcc01559e5', <Replica:6b806>: b'550d12791b5f84d82f292bb7d1316d30fda0824f72317ab066854edcc01559e5'}
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Received final states are : {<Replica:6b805>: {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}, <Replica:6b807>: {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}, <Replica:6b806>: {'movie': 'star', 'disco': 'dandiyaan', 'jedi': 'skywalker', 'sith': 'jarjarbinks'}}
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Found enough correct hashes to start reconfiguration
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Starting new configuration
+2017-11-22 23:46:48 INFO     Creating replicas. Number = 3
+2017-11-22 23:46:48 INFO     setting up keys and starting replica: <Replica:6b808>
+2017-11-22 23:46:48 INFO     setting up keys and starting replica: <Replica:6b80a>
+2017-11-22 23:46:48 INFO     setting up keys and starting replica: <Replica:6b809>
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Reconfiguration complete
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Sending new configuration to client : <Client:6b802>
+2017-11-22 23:46:48 INFO     <Olympus:6b804>Sending new configuration to client : <Client:6b803>
+2017-11-22 23:46:48 INFO     received get_chain_info message from : <Replica:6b808>
+2017-11-22 23:46:48 INFO     sending back chain info to <Replica:6b808>
+2017-11-22 23:46:48 INFO     received get_chain_info message from : <Replica:6b80a>
+2017-11-22 23:46:48 INFO     sending back chain info to <Replica:6b80a>
+2017-11-22 23:46:48 INFO     received get_chain_info message from : <Replica:6b809>
+2017-11-22 23:46:48 INFO     sending back chain info to <Replica:6b809>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Replica:6b808>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Replica:6b808>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Replica:6b80a>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Replica:6b80a>
+2017-11-22 23:46:48 INFO     received get_public_key_maps message from: <Replica:6b809>
+2017-11-22 23:46:48 INFO     sending public key maps to :<Replica:6b809>

@@ -1,0 +1,1144 @@
+import time
+import collections
+import sys
+import logging
+import nacl.hash
+import os
+
+class Replica(process):
+  def get_logger(name, filename):
+    formatter = logging.Formatter(fmt='%(asctime)s %(levelname)-8s %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    hld = logging.FileHandler(filename, mode='a')
+    hld.setFormatter(formatter)
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(hld)
+    return logger
+
+  def setup(conf, head, tail, pri_key, cni, failures, cc, start_st, olympus):
+    self.db = start_st
+    self.state = "ACTIVE"
+    self.isHead = head
+    self.isTail = tail
+    self.headReplica = None
+    self.successor = self
+    self.predecessor = self
+    self.History = {}
+    self.current_slot = 0
+    self.resultCache = {}
+    self.retran_flag = 0
+    self.ReTransmittedRequest = []
+    self.privateKey =  pri_key
+    self.replicaKM = {}
+    self.clientKM = {}
+    self.flag = 0
+    self.client_num_id = cni
+    self.failures = failures
+    self.failure_map = collections.defaultdict(dict)
+    self.fail_flag = False
+    self.curr_fail_op = ""
+    self.logger = None
+    #for checkpointing
+    self.cp_interval = -1
+    self.cccslot = 0
+    self.chcslot = 0
+    self.h_cp_proof = {}
+    self.c_cp_proof = {}
+    self.hasher = nacl.hash.sha256
+    self.mod_cp_hash = ""
+    self.send_cp = 0
+    self.curr_config = cc
+    self.should_term = False
+
+    #for fault injection
+    self.client_request_t = {}
+    self.forwarded_request_t = {}
+    self.shuttle_t = {}
+    self.result_shuttle_t = {}
+    self.wedge_request_t = {}
+    self.new_config_t = {}
+    self.checkpt_t = {}
+    self.comp_cp_t = {}
+    self.get_run_st_t = {}
+    self.catch_up_t = {}
+    #fault injection counters
+    self.wr_cnt = 0
+    self.nc_cnt = 0
+    self.cp_cnt = 0
+    self.ccp_cnt = 0
+    self.grs_cnt = 0
+    self.cu_cnt = 0
+    self.th_num = 0
+    self.sleep_t = 0
+    #fault injection trigger flags
+    self.crash_f = False
+    self.th_flag = False
+    self.sl_flag = False
+    self.dr_flag = False
+    self.is_flag = False
+    self.eo_flag = False
+    self.ios_flag = False
+    self.irs_flag = False
+    self.dcs_flag = False
+
+  def run():
+    logger_file_name = conf['test_case_name'] + str(self).split(':')[1] + '_r.txt'
+    self.cp_interval = int(conf['checkpt_interval'])
+    self.logger = get_logger('replica', logger_file_name)
+    logger.info(str(self) + " Created for configuration : " + str(self.curr_config) + " with state : %s", self.db)
+    logger.info(str(self) + " Getting chain info from olympus")
+    send(('get_chain_info'), to = olympus)
+    await(self.flag == 1)
+    self.flag = 0
+    logger.info(str(self) + " getting public key maps from olympus")
+    send(('get_public_key_maps'), to = olympus)
+    logger.info(str(self) + " Parsing failures")
+    parse_failures()
+    logger.info(str(self) + " " + str(self.failures))
+    set_fail_flags("nc")
+    await(self.should_term == True)
+
+  def getNR(t):
+    i = 0
+    bb = ""
+    for c in t:
+      i = i + 1
+      if c == '(':
+        break
+    bb = t[i:len(t) - 1]
+    s_bb = bb.split(',')
+    return (int(s_bb[0]), int(s_bb[1]))
+
+  def getN(t):
+    i = 0
+    bb = ""
+    for c in t:
+      i = i+1
+      if c == '(':
+        break
+    bb = t[i:len(t) - 1]
+    return int(bb)
+
+  def logFailureMap():
+    logger.info("Client_request : %s", self.client_request_t)
+    logger.info("Forwarded Request : %s", self.forwarded_request_t)
+    logger.info("Shuttle : %s", self.shuttle_t)
+    logger.info("Result Shuttle : %s", self.result_shuttle_t)
+    logger.info("Wedge Request : %s", self.wedge_request_t)
+    logger.info("New Configuration : %s", self.new_config_t)
+    logger.info("Checkpoint : %s", self.checkpt_t)
+    logger.info("Complete Checkpoint : %s", self.comp_cp_t)
+    logger.info("Get Running State : %s", self.get_run_st_t)
+    logger.info("Catch Up : %s", self.catch_up_t)
+
+  def parse_failures():
+    # Form client_request(1, 2), crash();client_request(1, 2), crash()
+    if(self.failures != None):
+      l_pairs = self.failures.split(';')
+      for elem in l_pairs:
+        if len(elem.split(',')) == 3:
+          t = elem.split(',')[0].strip() +',' +elem.split(',')[1].strip()
+          f = elem.split(',')[2].strip()
+        else:
+          t = elem.split(',')[0].strip()
+          f = elem.split(',')[1].strip()
+        stub = t[0:5]
+        if stub == "clien":
+          (cn, rn) = getNR(t)
+          if cn in self.client_request_t:
+            self.client_request_t[cn].append([rn, f])
+          else:
+            self.client_request_t[cn] = [[rn, f]]
+
+        elif stub == "forwa":
+          (cn, rn) = getNR(t)
+          if cn in self.forwarded_request_t:
+            self.forwarded_request_t[cn].append([rn, f])
+          else:
+            self.forwarded_request_t[cn] = [[rn, f]]
+
+        elif stub == "shutt":
+          (cn, rn) = getNR(t)
+          if cn in self.shuttle_t:
+            self.shuttle_t[cn].append([rn, f])
+          else:
+            self.shuttle_t[cn] = [[rn, f]]
+
+        elif stub == "resul":
+          (cn, rn) = getNR(t)
+          if cn in self.result_shuttle_t:
+            self.result_shuttle_t[cn].append([rn, f])
+          else:
+            self.result_shuttle_t[cn] = [[rn, f]]
+
+        elif stub == "wedge":
+          cn = getN(t)
+          if cn in self.wedge_request_t:
+            self.wedge_request_t[cn].append(f)
+          else:
+            self.wedge_request_t[cn] = [f]
+
+        elif stub == "new_c":
+          cn = getN(t)
+          if cn in self.new_config_t:
+            self.new_config_t[cn].append(f)
+          else:
+            self.new_config_t[cn] = [f]
+
+        elif stub == "check":
+          cn = getN(t)
+          if cn in self.checkpt_t:
+            self.checkpt_t[cn].append(f)
+          else:
+            self.checkpt_t[cn] = [f]
+
+        elif stub == "compl":
+          cn = getN(t)
+          if cn in self.comp_cp_t:
+            self.comp_cp_t[cn].append(f)
+          else:
+            self.comp_cp_t[cn] = [f]
+
+        elif stub == "get_r":
+          cn = getN(t)
+          if cn in self.get_run_st_t:
+            self.get_run_st_t[cn].append(f)
+          else:
+            self.get_run_st_t[cn] = [f]
+
+        elif stub == "catch":
+          cn = getN(t)
+          if cn in self.catch_up_t:
+            self.catch_up_t[cn].append(f)
+          else:
+            self.catch_up_t[cn] = [f]
+    logFailureMap()
+
+  def get_slot_number():
+    s = self.current_slot
+    self.current_slot = self.current_slot + 1
+    return s
+
+  def checkIfRidPresentInHistory(requestID):
+    if requestID in self.History:
+      return True
+    return False
+
+  def orderCommand(s, o, args):
+    os = str(self);
+    os = os + ';' + str(s)
+    os = os + ';' + o
+    for arg in args:
+      os = os + ';' + arg
+    for key in self.History:
+      if (self.History[key] == os):
+        #become immutable and send erconfig
+        return "error"
+    return os
+
+  def getCorruptStatement(s, o, args):
+    os = str(self);
+    os = os + ';' + str(s)
+    os = os + ';' + o
+    for arg in args:
+      os = os + ';' + arg
+
+    return os
+
+  def verifyOrderProof(orderProof, requestID):
+    orderStatements = orderProof[requestID]
+    #for i in range(0, (len(orderStatements) - 1)):
+    #  if( orderStatements[i].split(';')[1:] != orderStatements[i+1].split(';')[1:] ):
+    #    return False
+    #return True
+    i = 0
+    for key in self.replicaKM:
+      prev = replicaKM[key].verify(orderStatements[0])
+      break
+    prev = prev.decode('utf-8').split(str(key))[1]
+    for key in self.replicaKM:
+      if(i < len(orderStatements)):
+        try:
+          t = replicaKM[key].verify(orderStatements[i]).decode('utf-8').split(str(key))[1]
+          if(prev != t):
+            return False
+        except:
+          output("Bad or corrupted key.")
+          return False
+      else:
+        return True
+        break
+      i = i + 1
+
+  def receive(msg = ('public_key_maps', cKM, rKM), from_ = olympus):
+    self.replicaKM = rKM
+    self.clientKM = cKM
+
+  def encodeStatement(statement):
+    enc_s = self.privateKey.sign(bytes(statement,'utf-8'))
+    return enc_s
+
+  def validate_checkpoint_proof(checkpoint_proof, cp_slot):
+    hash_list = []
+    hash_list = checkpoint_proof[cp_slot]
+    temp = hash_list[0]
+    for i in hash_list:
+      if(i != temp):
+        return False
+    return True
+
+  def get_hash():
+    st = ""
+    for key, val in self.db.items():
+      st = st + key + ':' + val + ';'
+    bst = bytes(st,'utf-8')
+    r_st_hash = self.hasher(bst, encoder=nacl.encoding.HexEncoder)
+    return r_st_hash
+
+  def truncate_history(slot_number):
+    output("printing history")
+    output(self.History)
+    for key in list(self.History):
+      if self.History[key].split(';')[1] < str(slot_number):
+        del self.History[key]
+    output("printing truncated history")
+    logger.info(str(self) + "Truncated the history")
+    output(self.History)
+
+  def receive(msg = ('completed_cp', cp_slot, checkpoint_proof), from_=p_id):
+    self.ccp_cnt = self.ccp_cnt + 1
+    set_fail_flags("ccp")
+    if self.dr_flag == False:
+      if self.state == "ACTIVE" :
+        output("received completed checkpoint proof should validate and truncate history")
+        output(checkpoint_proof)
+        truncate_history(cp_slot)
+        if(isHead != True):
+          send(('completed_cp', cp_slot, checkpoint_proof), to = self.predecessor)
+        self.cccslot = cp_slot
+        self.c_cp_proof = checkpoint_proof
+    else:
+      self.dr_flag == True
+
+  def receive(msg = ('checkpoint', cp_slot, checkpoint_proof), from_=p_id):
+    logger.info(str(self) + "Received checkpoint shuttle from " + str(p_id))
+    self.cp_cnt = self.cp_cnt + 1
+    set_fail_flags("cp")
+    if self.dr_flag == False:
+      if self.state == "ACTIVE" :
+        if(self.current_slot >= cp_slot):
+          checkpoint_proof[cp_slot].append(self.mod_cp_hash)
+          if(isTail != True):
+            output("received checkpoint, appended self hash")
+            output(checkpoint_proof)
+            logger.info(str(self) + "sending checkpoint proof forward to " + str(self.successor))
+            send(('checkpoint', cp_slot, checkpoint_proof), to = self.successor)
+          else:
+            output("In tail added self hash now checking validity")
+            output(checkpoint_proof)
+            if(validate_checkpoint_proof(checkpoint_proof, cp_slot)):
+              output("Checkpoint proof complete. Sending cp back in the chain")
+              logger.info(str(self) + "sending checkpoint proof back in the chain " + str(self.predecessor))
+              truncate_history(cp_slot)
+              send(('completed_cp', cp_slot, checkpoint_proof), to = self.predecessor)
+              self.cccslot = cp_slot
+              self.c_cp_proof = checkpoint_proof
+            else:
+              output("Found error in the checkpoint proof, call for reconfiguration")
+              output("Actually the result shuttle will anyway cause reconfig request in this case")
+        else:
+          output("Saving the checkpoint until slot reaches required value")
+          self.chcslot = cp_slot
+          self.h_cp_proof = checkpoint_proof
+    else:
+      self.dr_flag = True
+
+  def receive(msg = ('put', k_v, client_id, requestID), from_=p_id):
+    cmd = 'put('+k_v[0]+','+(k_v[1])+')'
+    logger.info(str(self) + " Received " + cmd + "from" + str(p_id))
+    if(self.state == "ACTIVE"):
+      if(checkIfRidPresentInHistory(requestID) == False):
+        if(self.isHead):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'put', k_v)
+          if(os != 'error'):
+            self.History[requestID] = os
+          logger.info(str(self) + " The order statement for " + requestID + " is " + os)
+
+          enc_os = encodeStatement(os)
+
+          self.db[k_v[0]] = k_v[1]
+          orderProof = {}
+          orderProof[requestID] = [enc_os]
+          result_statement = ""
+          result_statement = encodeStatement(str(self) + ";" + "OK")
+
+          resultProof = {}
+          resultProof[requestID] = [result_statement]
+          OrderShuttle = [orderProof, resultProof]
+
+          send(('put', k_v, client_id, requestID, OrderShuttle), to = self.successor)
+          if((self.current_slot % self.cp_interval) == 0):
+              checkpoint_proof = {}
+              checkpoint_proof[self.current_slot] = [get_hash()]
+              logger.info(str(self) + " Checkpoint reached sending proof to successor")
+              output(checkpoint_proof)
+              send(('checkpoint', self.current_slot, checkpoint_proof), to = self.successor)
+        else:
+          #this is a retransmission case handle it accordingly
+          output("replica says retransmission")
+          logger.info(str(self) + " received the broadcast from client.")
+          if(requestID in self.resultCache) :
+            logger.info(str(self) + " the result shuttle for broadcasted operation present in result cache. sending it to client :" + str(client_id))
+            send(('put_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+          else:
+            logger.info(str(self)+" result is not in cache")
+            self.retran_flag = 0
+            self.ReTransmittedRequest.append(requestID)
+            logger.info(str(self)+" Sending the operation to head and waiting for the result shuttle to come back")
+            send(('put', k_v, client_id, requestID), to = self.headReplica)
+            if await(self.retran_flag == 1):
+              logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+              send(('put_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+              self.retran_flag = 0
+            elif timeout(conf['head_timeout']/1000):
+              logger.info(str(self) + " timed out. Sending reconfiguration request to olympus")
+              send(('reconfiguration', self.curr_config), to = olympus)
+
+      else:
+        logger.info(str(self) + " received the broadcast from client.")
+        if(requestID in self.resultCache) :
+          logger.info(str(self) + " the result shuttle for broadcasted operation present in result cache. sending it to client :" + str(client_id))
+          send(('put_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+
+        else:
+          logger.info(str(self)+" result is not in cache")
+          self.retran_flag = 0
+          self.ReTransmittedRequest.append(requestID)
+          logger.info(str(self)+" waiting for the result shuttle to come back")
+          if await(self.retran_flag == 1):
+            logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+            send(('put_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+            self.retran_flag = 0
+          elif timeout(conf['head_timeout']/1000):
+            logger.info(str(self) + " timed out. Sending reconfiguration request to olympus")
+            send(('reconfiguration', self.curr_config), to = olympus)
+
+    else:
+      output("Replica is immutable")
+      send(('immutable',requestID), to = client_id)
+
+  def receive(msg = ('put', k_v, client_id, requestID, OrderShuttle), from_=p_id):
+
+    cmd = 'put(' +k_v[0]+','+k_v[1]+')'
+    logger.info(str(self) + " Received "+cmd+" from: " + str(p_id))
+    if(self.state == "ACTIVE"):
+
+      if(isHead != True):
+        if(verifyOrderProof(OrderShuttle[0], requestID) == True):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'put', k_v)
+          if(os != 'error'):
+            self.History[requestID] = os
+          logger.info(str(self) + " The order statement for "+requestID + "is: " + os)
+
+          enc_os = encodeStatement(os)
+
+          self.db[k_v[0]] = k_v[1]
+          OrderShuttle[0][requestID].append(enc_os)
+          result_statement = ""
+          result_statement = encodeStatement(str(self) + ";" + "OK")
+
+          OrderShuttle[1][requestID].append(result_statement)
+
+          if((self.current_slot % self.cp_interval) == 0):
+            self.mod_cp_hash = get_hash()
+            #self.chcslot = cp_slot
+            #self.h_cp_proof = checkpoint_proof
+            if(self.chcslot != -1 and self.chcslot == self.current_slot):
+              self.h_cp_proof[self.chcslot].append(self.mod_cp_hash)
+              self.send_cp = 1
+
+
+          if(isTail != True):
+            logger.info(str(self) + " sending order shuttle forward to " + str(self.successor))
+            send(('put', k_v, client_id, requestID, OrderShuttle), to = self.successor)
+            if(self.send_cp == 1):
+              output(self.h_cp_proof)
+              logger.info(str(self) + "sending checkpoint proof forward to " + str(self.successor))
+              send(('checkpoint', self.chcslot, self.h_cp_proof), to = self.successor)
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+
+          else:
+            logger.info(str(self) + " sending the result shuttle to client: " + str(client_id))
+            send(('put_result', OrderShuttle[1], requestID), to = client_id)
+            logger.info(str(self) + " send the result shuttle back in the chain to: " + str(self.predecessor))
+            send(('result_back', OrderShuttle[1], requestID, client_id), to = self.predecessor)
+            if(self.send_cp == 1):
+              if(validate_checkpoint_proof(self.h_cp_proof, self.chcslot)):
+                output("Checkpoint proof complete. Sending cp back in the chain")
+                logger.info(str(self) + "sending checkpoint proof back in the chain " + str(self.predecessor))
+                truncate_history(self.chcslot)
+                send(('completed_cp', self.chcslot, self.h_cp_proof), to = self.predecessor)
+                self.cccslot = self.chcslot
+                self.c_cp_proof = self.h_cp_proof
+              else:
+                output("Found error in the checkpoint proof, call for reconfiguration")
+                output("Actually the result shuttle will anyway cause reconfig request in this case")
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+
+        else:
+          logger.info(str(self) + " There orderProof is not correct. Becoming IMMUTABLE and sending reconfiguration request to olympus")
+          output("Dropping invalid request")
+          send(('reconfiguration', self.curr_config), to = olympus)
+
+  def receive(msg=('get', key, client_id, requestID), from_=p_id):
+    cmd = 'get(' +key+')'
+    logger.info(str(self) + " Received "+cmd+" from: " + str(p_id))
+    if(self.state == "ACTIVE"):
+
+      if(checkIfRidPresentInHistory(requestID) == False):
+        if(self.isHead):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'get', [key])
+          if(os != 'error'):
+            self.History[requestID] = os
+          logger.info(str(self) + " The order statement for "+requestID + "is: " + os)
+
+          enc_os = encodeStatement(os)
+
+          orderProof = {}
+          orderProof[requestID] = [enc_os]
+          result_statement = ""
+
+          if(key in self.db):
+            result_statement = encodeStatement(str(self) + ";" + self.db[key])
+          else:
+            result_statement = encodeStatement(str(self) + ";")
+
+          resultProof = {}
+          resultProof[requestID] = [result_statement]
+          OrderShuttle = [orderProof, resultProof]
+
+          logger.info(str(self) + " sending order shuttle forward to " + str(self.successor))
+          send(('get', key, client_id, requestID, OrderShuttle), to = self.successor)
+          if((self.current_slot % self.cp_interval) == 0):
+              checkpoint_proof = {}
+              checkpoint_proof[self.current_slot] = [get_hash()]
+              logger.info(str(self) + " Checkpoint reached sending proof to successor")
+              output(checkpoint_proof)
+              send(('checkpoint', self.current_slot, checkpoint_proof), to = self.successor)
+        else:
+          #this is a retransmission case handle it accordingly
+          logger.info(str(self) + " received the broadcast from client.")
+          if(requestID in self.resultCache) :
+            logger.info(str(self) + " the result shuttle for broadcasted operation present in result cache. sending it to client :" + str(client_id))
+            send(('get_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+          else:
+            logger.info(str(self)+" result is not in cache")
+            self.retran_flag = 0
+            self.ReTransmittedRequest.append(requestID)
+            logger.info(str(self)+" Sending the operation to head and waiting for the result shuttle to come back")
+            send(('get', key, client_id, requestID), to = self.headReplica)
+            if await(self.retran_flag == 1):
+              logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+              send(('get_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+              self.retran_flag = 0
+            elif timeout(conf['head_timeout']/1000):
+              logger.info(str(self) + " timed out. Sending reconfiguration request to olympus")
+              send(('reconfiguration', self.curr_config), to = olympus)
+
+
+      else:
+        logger.info(str(self)+" result is not in cache")
+        self.retran_flag = 0
+        self.ReTransmittedRequest.append(requestID)
+        logger.info(str(self)+" waiting for the result shuttle to come back")
+        if await(self.retran_flag == 1):
+          logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+          send(('get_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+          self.retran_flag = 0
+        elif timeout(conf['head_timeout']/1000):
+          logger.info(str(self) + " timed out. Becomes immutable and sends the reconfiguration request to olympus")
+          send(('reconfiguration', self.curr_config), to = olympus)
+    else:
+      output("Replica is immutable")
+      send(('immutable',requestID), to = client_id)
+
+  def receive(msg = ('get', key, client_id, requestID, OrderShuttle), from_=p_id):
+    cmd = 'get(' +key+')'
+    logger.info(str(self) + " Received "+cmd+" from: " + str(p_id))
+    if(self.state == 'ACTIVE'):
+      if(isHead != True):
+        if(verifyOrderProof(OrderShuttle[0], requestID) == True):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'get', [key])
+          if(os != 'error'):
+            self.History[requestID] = os
+          logger.info(str(self) + " The order statement for "+requestID + "is: " + os)
+
+          enc_os = encodeStatement(os)
+
+          OrderShuttle[0][requestID].append(enc_os)
+          result_statement = ""
+
+
+          if(key in self.db):
+            result_statement = encodeStatement(str(self) + ";" + self.db[key])
+          else:
+            result_statement = encodeStatement(str(self) + ";")
+
+          OrderShuttle[1][requestID].append(result_statement)
+
+          if((self.current_slot % self.cp_interval) == 0):
+            self.mod_cp_hash = get_hash()
+            #self.chcslot = cp_slot
+            #self.h_cp_proof = checkpoint_proof
+            if(self.chcslot != -1 and self.chcslot == self.current_slot):
+              self.h_cp_proof[self.chcslot].append(self.mod_cp_hash)
+              self.send_cp = 1
+
+          if(isTail != True):
+            logger.info(str(self) + " sending order shuttle forward to " + str(self.successor))
+            send(('get', key, client_id, requestID, OrderShuttle), to = self.successor)
+            if(self.send_cp == 1):
+              output(self.h_cp_proof)
+              logger.info(str(self) + "sending checkpoint proof forward to " + str(self.successor))
+              send(('checkpoint', self.chcslot, self.h_cp_proof), to = self.successor)
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+
+          else:
+            logger.info(str(self) + " sending order shuttle forward to " + str(client_id))
+            send(('get_result', OrderShuttle[1], requestID), to = client_id)
+            logger.info(str(self) + " sending result shuttle forward to " + str(self.predecessor))
+
+            if(self.send_cp == 1):
+              if(validate_checkpoint_proof(self.h_cp_proof, self.chcslot)):
+                output("Checkpoint proof complete. Sending cp back in the chain")
+                logger.info(str(self) + "sending checkpoint proof back in the chain " + str(self.predecessor))
+                truncate_history(self.chcslot)
+                send(('completed_cp', self.chcslot, self.h_cp_proof), to = self.predecessor)
+                self.cccslot = self.chcslot
+                self.c_cp_proof = self.h_cp_proof
+              else:
+                output("Found error in the checkpoint proof, call for reconfiguration")
+                output("Actually the result shuttle will anyway cause reconfig request in this case")
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+        else:
+          logger.info(str(self) + " There orderProof is not correct. Becoming IMMUTABLE and sending reconfiguration request to olympus")
+          output("Dropping invalid request")
+          send(('reconfiguration', self.curr_config), to = olympus)
+
+  def receive(msg=('slice', args, client_id, requestID), from_=p_id):
+    cmd = 'slice(' +str(args)+')'
+    logger.info(str(self) + " Received "+cmd+" from: " + str(p_id))
+    if(self.state == "ACTIVE"):
+
+      if(checkIfRidPresentInHistory(requestID) == False):
+        if(self.isHead):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'slice', args)
+          if(os != 'error'):
+            self.History[requestID] = os
+          orderProof = {}
+          logger.info(str(self) + " The order statement for "+requestID + "is: " + os)
+
+          enc_os = encodeStatement(os)
+
+          orderProof[requestID] = [enc_os]
+          result_statement = ""
+
+          (start, end) = args[1].split(':')
+          if(args[0] in self.db):
+            val = self.db[args[0]]
+            if((int(start) >= 0) and (int(end) <= len(val))):
+              val = val[int(start):int(end)]
+              self.db[args[0]] = val
+              result_statement = encodeStatement(str(self) + ';' + "OK")
+            else:
+              result_statement = encodeStatement(str(self) + ';' + "FAIL")
+          else:
+            result_statement = encodeStatement(str(self) + ';' + "FAIL")
+
+          resultProof = {}
+          resultProof[requestID] = [result_statement]
+          OrderShuttle = [orderProof, resultProof]
+          #injecting the drop result statement failure
+
+          if(fail_flag == True and self.curr_fail_op == "drop_result_statement"):
+            logger.info(str(self) + " Injecting the drop_result_statement failure")
+            output("injecting drop_result_statement Failure")
+            OrderShuttle[1][requestID].pop(0)
+            self.curr_fail_op = ""
+          logger.info(str(self) + " sending order shuttle forward to " + str(self.successor))
+          send(('slice', args, client_id, requestID, OrderShuttle), to = self.successor)
+          if((self.current_slot % self.cp_interval) == 0):
+              checkpoint_proof = {}
+              checkpoint_proof[self.current_slot] = [get_hash()]
+              logger.info(str(self) + " Checkpoint reached sending proof to successor")
+              output(checkpoint_proof)
+              send(('checkpoint', self.current_slot, checkpoint_proof), to = self.successor)
+        else:
+          #this is a retransmission case handle it accordingly
+          logger.info(str(self) + " received the broadcast from client.")
+          if(requestID in self.resultCache) :
+            logger.info(str(self) + " the result shuttle for broadcasted operation present in result cache. sending it to client :" + str(client_id))
+            send(('slice_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+          else:
+            logger.info(str(self)+" result is not in cache")
+            self.retran_flag = 0
+            self.ReTransmittedRequest.append(requestID)
+            logger.info(str(self)+" Sending the operation to head and waiting for the result shuttle to come back")
+            send(('slice', args, client_id, requestID), to = self.headReplica)
+            if await(self.retran_flag == 1):
+              logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+              send(('slice_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+              self.retran_flag = 0
+            elif timeout(conf['head_timeout']/1000):
+              logger.info(str(self) + " timed out. Sending reconfiguration request to olympus")
+              send(('reconfiguration', self.curr_config), to = olympus)
+
+      else:
+        logger.info(str(self)+" result is not in cache")
+        self.retran_flag = 0
+        self.ReTransmittedRequest.append(requestID)
+        logger.info(str(self)+" waiting for the result shuttle to come back")
+        if await(self.retran_flag == 1):
+          logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+          send(('slice_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+          self.retran_flag = 0
+        elif timeout(conf['head_timeout']/1000):
+          logger.info(str(self) + " timed out. Becomes immutable and sends the reconfiguration request to olympus")
+          send(('reconfiguration', self.curr_config), to = olympus)
+
+    else:
+      output("Replica is immutable")
+      send(('immutable',requestID), to = client_id)
+
+  def receive(msg=('slice', args, client_id, requestID, OrderShuttle), from_=p_id):
+    cmd = 'slice(' +str(args)+')'
+    logger.info(str(self) + " Received "+cmd+" from: " + str(p_id))
+    if(self.state == "ACTIVE"):
+      if(isHead != True):
+        if(verifyOrderProof(OrderShuttle[0], requestID) == True):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'slice', args)
+          if(os != 'error'):
+            self.History[requestID] = os
+          logger.info(str(self) + " The order statement for "+requestID + "is: " + os)
+
+          enc_os = encodeStatement(os)
+
+          OrderShuttle[0][requestID].append(enc_os)
+          result_statement = ""
+
+          (start, end) = args[1].split(':')
+          if(args[0] in self.db):
+            val = self.db[args[0]]
+            if((int(start) >= 0) and (int(end) <= len(val))):
+              val = val[int(start):int(end)]
+              self.db[args[0]] = val
+              result_statement = encodeStatement(str(self) + ';' + "OK")
+            else:
+              result_statement = encodeStatement(str(self) + ';' + "FAIL")
+          else:
+            result_statement = encodeStatement(str(self) + ';' + "FAIL")
+
+          OrderShuttle[1][requestID].append(result_statement)
+
+          if((self.current_slot % self.cp_interval) == 0):
+            self.mod_cp_hash = get_hash()
+            #self.chcslot = cp_slot
+            #self.h_cp_proof = checkpoint_proof
+            if(self.chcslot != -1 and self.chcslot == self.current_slot):
+              self.h_cp_proof[self.chcslot].append(self.mod_cp_hash)
+              self.send_cp = 1
+          if(isTail != True):
+            logger.info(str(self) + " sending order shuttle forward to " + str(self.successor))
+            send(('slice', args, client_id, requestID, OrderShuttle), to = self.successor)
+            if(self.send_cp == 1):
+              output(self.h_cp_proof)
+              logger.info(str(self) + "sending checkpoint proof forward to " + str(self.successor))
+              send(('checkpoint', self.chcslot, self.h_cp_proof), to = self.successor)
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+          else:
+            logger.info(str(self) + " sending result shuttle to " + str(client_id))
+            send(('slice_result', OrderShuttle[1], requestID), to = client_id)
+            logger.info(str(self) + " sending result shuttle back to " + str(self.predecessor))
+            send(('result_back', OrderShuttle[1], requestID, client_id), to = self.predecessor)
+            if(self.send_cp == 1):
+              if(validate_checkpoint_proof(self.h_cp_proof, self.chcslot)):
+                output("Checkpoint proof complete. Sending cp back in the chain")
+                logger.info(str(self) + "sending checkpoint proof back in the chain " + str(self.predecessor))
+                truncate_history(self.chcslot)
+                send(('completed_cp', self.chcslot, self.h_cp_proof), to = self.predecessor)
+                self.cccslot = self.chcslot
+                self.c_cp_proof = self.h_cp_proof
+              else:
+                output("Found error in the checkpoint proof, call for reconfiguration")
+                output("Actually the result shuttle will anyway cause reconfig request in this case")
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+        else:
+          logger.info(str(self) + " There orderProof is not correct. Becoming IMMUTABLE and sending reconfiguration request to olympus")
+          output("Dropping invalid request")
+          send(('reconfiguration', self.curr_config), to = olympus)
+
+  def receive(msg=('append', args, client_id, requestID), from_=p_id):
+    cmd = 'append(' +str(args)+')'
+    logger.info(str(self) + " Received "+cmd+" from: " + str(p_id))
+    if(self.state == "ACTIVE"):
+
+      if(checkIfRidPresentInHistory(requestID) == False):
+        if(self.isHead):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'append', args)
+          if(os != 'error'):
+            self.History[requestID] = os
+          orderProof = {}
+          logger.info(str(self) + " The order statement for "+requestID + "is: " + os)
+
+          enc_os = encodeStatement(os)
+
+          orderProof[requestID] = [enc_os]
+          result_statement = ""
+          if(args[0] in self.db):
+            val = self.db[args[0]]
+            val = val + " " + args[1]
+            self.db[args[0]] = val
+            result_statement = encodeStatement(str(self) + ';' + "OK")
+          else:
+            result_statement = encodeStatement(str(self) + ';' + "FAIL")
+
+          resultProof = {}
+          resultProof[requestID] = [result_statement]
+          OrderShuttle = [orderProof, resultProof]
+
+          logger.info(str(self) + " sending order shuttle forward to " + str(self.successor))
+          send(('append', args, client_id, requestID, OrderShuttle), to = self.successor)
+          if((self.current_slot % self.cp_interval) == 0):
+              checkpoint_proof = {}
+              checkpoint_proof[self.current_slot] = [get_hash()]
+              logger.info(str(self) + " Checkpoint reached sending proof to successor")
+              output(checkpoint_proof)
+              send(('checkpoint', self.current_slot, checkpoint_proof), to = self.successor)
+        else:
+          #this is a retransmission case handle it accordingly
+          logger.info(str(self) + " received the broadcast from client.")
+          if(requestID in self.resultCache) :
+            logger.info(str(self) + " the result shuttle for broadcasted operation present in result cache. sending it to client :" + str(client_id))
+            send(('append_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+          else:
+            logger.info(str(self)+" result is not in cache")
+            self.retran_flag = 0
+            self.ReTransmittedRequest.append(requestID)
+            logger.info(str(self)+" Sending the operation to head and waiting for the result shuttle to come back")
+            send(('append', args, client_id, requestID), to = self.headReplica)
+            if await(self.retran_flag == 1):
+              logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+              send(('append_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+              self.retran_flag = 0
+            elif timeout(conf['head_timeout']/1000):
+              logger.info(str(self) + " timed out. Sending reconfiguration request to olympus")
+              send(('reconfiguration', self.curr_config), to = olympus)
+
+      else:
+        logger.info(str(self)+" result is not in cache")
+        self.retran_flag = 0
+        self.ReTransmittedRequest.append(requestID)
+        logger.info(str(self)+" waiting for the result shuttle to come back")
+        if await(self.retran_flag == 1):
+          logger.info(str(self) + " the result shuttle for broadcasted operation  received. sending it to client :" + str(client_id))
+          send(('append_result', {requestID : self.resultCache[requestID]}, requestID), to = client_id)
+          self.retran_flag = 0
+        elif timeout(conf['head_timeout']/1000):
+          logger.info(str(self) + " timed out. Becomes immutable and sends the reconfiguration request to olympus")
+          send(('reconfiguration', self.curr_config), to = olympus)
+
+    else:
+      output("Replica is immutable")
+      send(('immutable',requestID), to = client_id)
+
+  def receive(msg=('append', args, client_id, requestID, OrderShuttle), from_=p_id):
+    cmd = 'append(' +str(args)+')'
+    logger.info(str(self) + " Received "+cmd+" from: " + str(p_id))
+    if(self.state == 'ACTIVE'):
+      if(isHead != True):
+        if(verifyOrderProof(OrderShuttle[0], requestID) == True):
+          slot = get_slot_number()
+          os = orderCommand(slot, 'append', args)
+          if(os != 'error'):
+            self.History[requestID] = os
+          logger.info(str(self) + " The order statement for "+requestID + "is: " + os)
+
+          enc_os = encodeStatement(os)
+
+          OrderShuttle[0][requestID].append(enc_os)
+          result_statement = ""
+          if(args[0] in self.db):
+            val = self.db[args[0]]
+            val = val + " " + args[1]
+            self.db[args[0]] = val
+            result_statement = encodeStatement(str(self) + ';' + "OK")
+          else:
+            result_statement = encodeStatement(str(self) + ';' + "FAIL")
+
+          OrderShuttle[1][requestID].append(result_statement)
+
+          if((self.current_slot % self.cp_interval) == 0):
+            self.mod_cp_hash = get_hash()
+            #self.chcslot = cp_slot
+            #self.h_cp_proof = checkpoint_proof
+            if(self.chcslot != -1 and self.chcslot == self.current_slot):
+              self.h_cp_proof[self.chcslot].append(self.mod_cp_hash)
+              self.send_cp = 1
+
+          if(isTail != True):
+            logger.info(str(self) + " sending order shuttle forward to " + str(self.successor))
+            send(('append', args, client_id, requestID, OrderShuttle), to = self.successor)
+            if(self.send_cp == 1):
+              output(self.h_cp_proof)
+              logger.info(str(self) + "sending checkpoint proof forward to " + str(self.successor))
+              send(('checkpoint', self.chcslot, self.h_cp_proof), to = self.successor)
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+
+          else:
+            logger.info(str(self) + " sending result shuttle to " + str(client_id))
+            send(('append_result', OrderShuttle[1], requestID), to = client_id)
+            logger.info(str(self) + " sending result shuttle back to " + str(self.predecessor))
+            send(('result_back', OrderShuttle[1], requestID, client_id), to = self.predecessor)
+            if(self.send_cp == 1):
+              if(validate_checkpoint_proof(self.h_cp_proof, self.chcslot)):
+                output("Checkpoint proof complete. Sending cp back in the chain")
+                logger.info(str(self) + "sending checkpoint proof back in the chain " + str(self.predecessor))
+                truncate_history(self.chcslot)
+                send(('completed_cp', self.chcslot, self.h_cp_proof), to = self.predecessor)
+                self.cccslot = self.chcslot
+                self.c_cp_proof = self.h_cp_proof
+              else:
+                output("Found error in the checkpoint proof, call for reconfiguration")
+                output("Actually the result shuttle will anyway cause reconfig request in this case")
+              self.send_cp = 0
+              self.chcslot = -1
+              self.h_cp_proof = {}
+        else:
+          logger.info(str(self) + " There orderProof is not correct. Becoming IMMUTABLE and sending reconfiguration request to olympus")
+          output("Dropping invalid request")
+          send(('reconfiguration', self.curr_config), to = olympus)
+
+  def receive(msg = ('get_dict'), from_ = client_id):
+    send(('dict_reply', self.db), to = client_id)
+
+  def receive(msg = ('result_back', result_shuttle, requestID, clientID), from_ = p_id):
+    cond = True
+    resultStatements = result_shuttle[requestID]
+    i = 0
+    for key in self.replicaKM:
+      try:
+        self.replicaKM[key].verify(resultStatements[i])
+        i = i + 1
+      except:
+        cond = False
+        break
+    if(cond == True):
+      if(requestID in self.ReTransmittedRequest):
+        output("Sending back the response of retransmitted request to : CLIENT")
+        self.resultCache[requestID] = result_shuttle[requestID]
+        if(isHead == False):
+          send(('result_back', result_shuttle, requestID), to = self.predecessor)
+        self.retran_flag = 1
+      else:
+        #injecting the drop result statement failure
+        #fail_flag = check_if_failure(str(clientID), "drop_result_statement")
+        #if((fail_flag == True) and (self.curr_fail_op == "drop_result_statement")):
+        #  output("injecting drop_result_statement Failure")
+        #  result_shuttle[requestID].pop(0)
+        #  self.curr_fail_op = ""
+
+        self.resultCache[requestID] = result_shuttle[requestID]
+        if(isHead == False):
+          send(('result_back', result_shuttle, requestID), to = self.predecessor)
+    else:
+      output("Needs reconfiguration as the result shuttle is inconsistent. The replica will become immutable.")
+      logger.info(str(self) + " Result shuttle not consistent. Sending reconfig request to oly")
+      send(('reconfiguration', self.curr_config), to = olympus)
+
+  def receive(msg=('val_chain_info', p, s, head), from_ = olympus):
+    self.successor = s
+    self.predecessor = p
+    self.headReplica = head
+    self.flag = 1
+
+  def receive(msg = ('wedge_request'), from_=olym):
+    self.wr_cnt = self.wr_cnt + 1
+    set_fail_flags("wr")
+    logger.info(str(self) + " Wedged request received")
+    if self.dr_flag == False :
+      self.state = "IMMUTABLE"
+      logger.info(str(self) + " Sending response for wedge request")
+      send(('wedged_reply', self, self.History, self.c_cp_proof), to = olym)
+    else:
+      self.dr_flag = False
+
+  def receive(msg = ('get_running_state'), from_= olymp):
+    send(('running_state', self.db), to=olymp)
+    self.should_term = True
+
+  #send(('catch_up', catch_up_hist), to = r)
+  def receive(msg = ('catch_up', catch_up_hist), from_=olym):
+    self.cu_cnt = self.cu_cnt + 1
+    set_fail_flags("cu")
+    logger.info(str(self) + "Catch_up message received")
+    logger.info(str(self) + " Catch up history is: %s", catch_up_hist)
+    if len(catch_up_hist) != 0:
+      for rid in catch_up_hist:
+        slot = get_slot_number()
+        cmd = catch_up_hist[rid]
+        if cmd.split(';')[2] == 'put':
+          key = cmd.split(';')[3]
+          val = cmd.split(';')[4]
+          self.db[key] = val
+
+        elif cmd.split(';')[2] == 'slice':
+          key = cmd.split(';')[3]
+          value = cmd.split(';')[4]
+          (start, end) = value.split(':')
+          v = self.db[key]
+          if((int(start) >= 0) and (int(end) <= len(v))):
+            v = v[int(start):int(end)]
+            self.db[key] = v
+
+        elif cmd.split(';')[2] == 'append':
+          key = cmd.split(';')[3]
+          value = cmd.split(';')[4]
+          if(key in self.db):
+            v = self.db[key]
+            v = v + " " + value
+            self.db[key] = val
+    logger.info(str(self) + " Catching up successful. sending back caught up message. New state is : %s" , self.db)
+    new_hash = get_hash()
+    send(('caught_up', new_hash, self.db), to=olym)
+    #end(('caught_up', new_hash), to=olym)
+    logger.info(str(self) + " Caught_up hash sent")
+    self.should_term = True
+
+
+  #testing code
+  def receive(msg = ('reconfig'), from_=client):
+    if isHead == True:
+      self.db["jedi"] = "skywalker"
+      self.History[str(self)+str(self.current_slot)] = str(self) + ';' + str(self.current_slot) + ';put;jedi;skywalker'
+      self.db["sith"] = "jarjarbinks"
+      self.current_slot = self.current_slot + 1
+      self.History[str(self)+str(self.current_slot)] = str(self) + ';' + str(self.current_slot) + ';put;sith;jarjarbinks'
+    send(('immutable',str(client)+"rfg"), to = client)
+    send(('reconfiguration', self.curr_config), to = olympus)
+
+  def generate_stub(elem):
+    st = ""
+    for c in elem:
+      if c == '(':
+        break
+      st = st + c
+    return st.strip()
+
+  def set_f_flags(l_f):
+    for elem in l_f:
+      stub = generate_stub(elem)
+      logger.info(str(self) + "Stub generated is " + stub)
+      if stub == "crash":
+        logger.info(str(self) + " Crash Triggered")
+        logging.shutdown()
+        os._exit(-1)
+
+      elif stub == "truncate_history":
+        n = elem[17:len(elem)-1]
+        self.th_num = int(n)
+        self.th_flag = True
+        logger.info(str(self) + " Truncating history by " + str(self.th_num))
+        revk = list(self.History)
+        num_to_pop = int(self.th_num)
+        if self.th_num > len(self.History):
+          for el in revk:
+            self.History.pop(el)
+        else:
+          c = 0
+          for el in revk:
+            if c == num_to_pop:
+              break
+            else:
+              self.History.pop(el)
+            c = c+1
+        logger.info(str(self) + " Truncated History is %s" ,str(self.History))
+
+      elif stub == "sleep":
+        t = elem[6:len(elem)-1]
+        logger.info(str(self) + " Sleeping for time (ms)" + str(t))
+        time.sleep(int(t))
+
+      elif stub == "drop":
+        self.dr_flag = True
+
+      elif stub == "increment_slot":
+        self.is_flag = True
+
+      elif stub == "extra_op":
+        self.eo_flag = True
+
+      elif stub == "invalid_order_sig":
+        self.ios_flag = True
+
+      elif stub == "invalid_result_sig":
+        self.irs_flag = True
+
+      elif stub == "drop_checkpt_stmts":
+        self.dcs_flag = True
+
+  def set_fail_flags(t):
+    if t == "cp":
+      if len(self.checkpt_t) != 0:
+        logger.info(str(self) + " Checking for CP Trigger at CP_number = " +str(self.cp_cnt))
+        if self.cp_cnt in self.checkpt_t:
+          logger.info(str(self) + " Trigger Checkpoint reached ")
+          logger.info(str(self) + " Failures at this Trigger : %s" , self.checkpt_t[self.cp_cnt])
+          set_f_flags(self.checkpt_t[self.cp_cnt])
+
+    elif t == "nc":
+      if len(self.new_config_t) != 0:
+        if (self.curr_config-1) in self.new_config_t:
+          set_f_flags(self.new_config_t[self.nc_cnt])
+
+    elif t == "wr":
+      if len(self.wedge_request_t) != 0:
+        if self.wr_cnt in self.wedge_request_t:
+          set_f_flags(self.wedge_request_t[self.wr_cnt])
+
+    elif t == "ccp":
+      if len(self.comp_cp_t) != 0:
+        if self.ccp_cnt in self.comp_cp_t:
+          logger.info(str(self) + "Trigger Completed Checkpoint received ")
+          set_f_flags(self.comp_cp_t[self.ccp_cnt])
+
+    elif t == "grs":
+      if len(self.get_run_st_t) != 0:
+        if self.grs_cnt in self.get_run_st_t:
+          set_f_flags(self.get_run_st_t[self.grs_cnt])
+
+    elif t == "cu":
+      if len(self.catch_up_t) != 0:
+        if self.cu_cnt in self.catch_up_t:
+          logger.info(str(self) + " Catchup message Trigger reached ")
+          set_f_flags(self.catch_up_t[self.cu_cnt])

@@ -1,0 +1,84 @@
+import time
+import sys
+import logging
+
+olympus = import_da('Olympus')
+client = import_da('Client')
+
+def get_logger(name, filename):
+  formatter = logging.Formatter(fmt='%(asctime)s %(levelname)-8s %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+  hld = logging.FileHandler(filename, mode='w')
+  hld.setFormatter(formatter)
+  logger = logging.getLogger(name)
+  logger.setLevel(logging.DEBUG)
+  logger.addHandler(hld)
+  return logger
+
+def getWorkload(conf):
+  workload = {}
+  for (key,val) in conf.items():
+    if key[0:8] == "workload":
+      ind = ""
+      for c in key[8:len(key)]:
+        if c != '[' and c != ']':
+          ind = ind + c
+      temp = val.split(';')
+      commands = []
+      for cmd in temp:
+        commands.append(cmd.strip())
+      workload[ind] = commands
+  return workload
+
+def getFailures(conf):
+  failures = {}
+  prev_conf = 0
+  f_r_dict = {}
+  for (key, val) in conf.items():
+    if key[0:8] == "failures":
+      (conf, replica) = key[9:len(key)-1].split(',')
+      if prev_conf == int(conf):
+        f_r_dict[int(replica)] = val
+      else:
+        failures[prev_conf] = f_r_dict
+        prev_conf = conf
+        f_r_dict = {}
+        f_r_dict[int(replica)] = val
+  failures[prev_conf] = f_r_dict
+
+  return failures
+
+def main():
+  #logger = get_logger('startup', 'startup.txt')
+  conf = {}
+  workload = {}
+  failureCases = {}
+  cni = {}
+  with open(sys.argv[1], 'r') as f:
+    for line in f:
+      if line[0] != '#':
+        (key, sep, val) = line.partition('=')
+        if(len(sep) != 0):
+          val = val.strip()
+          conf[key.strip()] = int(val) if str.isdecimal(val) else val
+
+  workload = getWorkload(conf)
+  failure_cases = getFailures(conf)
+  output(failure_cases)
+  cli = new(client.Client, num=conf['num_client'])
+  i = 0
+  for c in cli:
+    cni[i] = c
+    i = i+1
+  output("Creating Olympus")
+  #oly = new(olympus.Olympus, num=1, at=conf['olympus_node'])
+  oly = new(olympus.Olympus, num=1)
+  setup(oly, (conf,cni,failure_cases, 0))
+  start(oly)
+
+  output("Creating Client")
+  w = 0
+  for c in cli:
+    setup(c, (conf,oly, workload[str(w)], 0))
+    start(c)
+    w = w + 1
+  sys.exit()

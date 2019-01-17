@@ -1,0 +1,10 @@
+test_case_name = Failure_free_inject_reconfig
+t = 1
+num_client = 2
+client_timeout = 3000
+olympus_timeout = 3000
+head_timeout = 3000
+nonhead_timeout = 3000
+checkpt_interval = 2
+workload[0] = put('movie', 'star');put('movie', 'star');put('movie', 'star');put('movie', 'star');reconfig;put('matrix', 'neo')
+workload[1] = get('movie');get('movie');put('disco', 'dandiyaan');get('movie');get('movie');append('matrix', 'anderson')

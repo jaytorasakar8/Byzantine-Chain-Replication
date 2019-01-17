@@ -1,0 +1,384 @@
+import random
+import time
+import sys
+import logging
+replica = import_da('Replica')
+olympus = import_da('Olympus')
+
+class Client(process):
+  def get_logger(name, filename):
+    formatter = logging.Formatter(fmt='%(asctime)s %(levelname)-8s %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    hld = logging.FileHandler(filename, mode='a')
+    hld.setFormatter(formatter)
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(hld)
+    return logger
+
+  def setup(conf, oly, workload, cc):
+    self.replicas = {}
+    self.flag = 0
+    self.RTRequest = []
+    self.private_key = ""
+    self.replicaKM = {}
+    self.clientKM = {}
+    self.logger = None
+    self.curr_config = cc
+    self.reconfig = False
+    self.reconfig_at = None
+    self.head = None
+    self.received_new_config = False
+
+  def run():
+    logger_file_name = conf['test_case_name'] + str(self).split(':')[1] + '_c.txt'
+    self.logger = get_logger('client', logger_file_name)
+    logger.info(str(self) + " sending get config request to olympus")
+    send(('getConfig', self), to = oly)
+    await(len(self.replicas) != 0)
+    logger.info(str(self) + " sending generate key request to olympus")
+    send(('generate_keys'), to = oly)
+    await(self.flag == 1)
+    self.flag = 0
+    logger.info(str(self) + " getting public key map from olympus")
+    send(('get_public_key_maps'), to = oly)
+    await(self.flag == 1)
+    self.flag = 0
+    logger.info(str(self) + " the workload is : " +str(workload))
+    output (" The workload is: ", workload)
+    if(workload[0][0:6] == 'pseudo'):
+      logger.info(str(self) + " generating the pseudo random workload")
+      key_val = workload[0][13:(len(workload[0])-1)]
+      seed = int(key_val.split(',')[0])
+      opn = int(key_val.split(',')[1])
+      workload = getPseudorandomWL(seed, opn)
+      output(workload)
+
+    rep = list(self.replicas)
+    self.head = rep[0]
+    opNum = 0
+    f_b = 0
+    prev_c = self.curr_config
+    for op in workload:
+      op_b = op[0:3]
+      if(op_b == 'put'):
+        key_val = op[4:(len(op)-1)]
+        args = getArguments(key_val)
+        logger.info(str(self) + " sending put operation with "+ str(key_val) + " to head :" + str(head))
+        send(('put', args, self, generateRequestId(opNum)), to = head)
+        i = 0
+        j = 0
+        while(j < 2):
+          if await((flag == 1) or (self.reconfig == True)):
+            self.flag = 0
+            if(self.reconfig == True):
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+            break
+          elif timeout(conf['client_timeout']/1000):
+            time.sleep(conf['client_timeout']/1000 - 1)
+            if prev_c == self.curr_config:
+              output("I'm broadcasting for operation : "+ op)
+              output(self.replicas)
+              logger.info(str(self) + " Operation timeout. Broadcasting to all clients")
+              output("Operation TimedOut. Broadcasting message to all clients")
+              self.RTRequest.append(generateRequestId(opNum))
+              for r in self.replicas:
+                send(('get', (args[0]), self, generateRequestId(opNum)), to = r)
+            else:
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+              break
+            j = j+1
+          i = i + 1
+
+
+      elif(op_b == 'get'):
+        key = op[4:(len(op)-1)]
+        args = getArguments(key)
+        logger.info(str(self) + " sending get operation with "+ args[0] + " to head :" + str(head))
+        send(('get', (args[0]), self, generateRequestId(opNum)), to = head)
+        i = 0
+        j = 0
+        while(j < 2):
+          if await((flag == 1) or (self.reconfig == True)):
+            self.flag = 0
+            if(self.reconfig == True):
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+            break
+          elif timeout(conf['client_timeout']/1000):
+            time.sleep(conf['client_timeout']/1000 - 1)
+            if prev_c == self.curr_config:
+              output("Broadcasting for operation " + op)
+              output(self.replicas)
+              logger.info(str(self) + " Operation timeout. Broadcasting to all clients")
+              output("Operation TimedOut. Broadcasting message to all clients")
+              self.RTRequest.append(generateRequestId(opNum))
+              for r in self.replicas:
+                send(('get', (args[0]), self, generateRequestId(opNum)), to = r)
+            else:
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+              break
+            j = j + 2
+          i = i + 1
+
+      elif(op_b == 'sli'):
+        key_val = op[6:(len(op)-1)]
+        args = getArguments(key_val)
+        logger.info(str(self) + " sending slice operation with "+ str(args) + " to head :" + str(head))
+        send(('slice', args, self, generateRequestId(opNum)), to = head)
+        i = 0
+        j = 0
+        while(j < 2):
+          if await((flag == 1) or (self.reconfig == True)):
+            self.flag = 0
+            if(self.reconfig == True):
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+            break
+          elif timeout(conf['client_timeout']/1000):
+            time.sleep(conf['client_timeout']/1000 - 1)
+            if prev_c == self.curr_config:
+              output("Broadcasting for operation " + op)
+              output(self.replicas)
+              logger.info(str(self) + " Operation timeout. Broadcasting to all clients")
+              output("Operation TimedOut. Broadcasting message to all clients")
+              self.RTRequest.append(generateRequestId(opNum))
+              for r in self.replicas:
+                send(('get', (args[0]), self, generateRequestId(opNum)), to = r)
+            else:
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+              break
+            j = j+2
+          i = i + 1
+
+      elif(op_b == 'app'):
+        key_val = op[7:(len(op)-1)]
+        args = getArguments(key_val)
+        logger.info(str(self) + " sending append operation with "+ str(args) + " to head :" + str(head))
+        send(('append', args, self, generateRequestId(opNum)), to = head)
+        i = 0
+        j = 0
+        while(j < 2):
+          if await((flag == 1) or (self.reconfig == True)):
+            self.flag = 0
+            if(self.reconfig == True):
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+            break
+          elif timeout(conf['client_timeout']/1000):
+            time.sleep(conf['client_timeout']/1000 - 1)
+            if prev_c == self.curr_config:
+              output("Broadcasting for operation " + op)
+              output(self.replicas)
+              logger.info(str(self) + " Operation timeout. Broadcasting to all clients")
+              output("Operation TimedOut. Broadcasting message to all clients")
+              self.RTRequest.append(generateRequestId(opNum))
+              for r in self.replicas:
+                send(('get', (args[0]), self, generateRequestId(opNum)), to = r)
+            else:
+              logger.info(str(self) + " Request lost in reconfig : " + op)
+              break
+            j = j+2
+          i = i + 1
+
+      #for testing purpose
+      elif(op_b == 'rec'):
+        send(('reconfig'), to = head)
+        logger.info(str(self) + " Sending the reconfig trigger to head :" + str(head))
+        if await((flag == 1) or (self.reconfig == True)):
+          self.flag = 0
+
+      if(self.reconfig == True):
+        output("Reconfiguration is underway. Ask olympus for reconfig request")
+        rr = 0
+        while (rr == 0):
+          logger.info(str(self) + " Sending get_new_config request to Olympus")
+          send(('need_new_config', self.curr_config), to = oly)
+          if await(self.received_new_config == True):
+            self.reconfig = False
+            logger.info(str(self) + " Waiting for the configuration to reboot")
+            time.sleep(conf['client_timeout']/1000 - 1)
+            rr = 1
+          elif timeout(conf['client_timeout']/1000):
+            logger.info(str(self) + " Waiting for new configuration timed out.")
+          logger.info(str(self) + " Exited the loop.")
+      opNum = opNum + 1
+
+    send(('get_dict'), to = head)
+    await(flag == 1)
+    flag = 0
+
+  def generateRequestId(opNum):
+    requestID = str(self) + ';' + str(opNum)
+    return requestID
+
+  def receive(msg = ('new_config', config, rkm, reps), from_ = olympus):
+    self.replicas = reps
+    self.head = list(reps)[0]
+    self.replicaKM = rkm
+    self.curr_config = config
+    output(reps)
+    logger.info(str(self) + " Received new configuration")
+    logger.info(str(self) + " New head is : " + str(self.head))
+    logger.info(str(self) + " Current Config is : " + str(self.curr_config))
+
+    self.received_new_config = True
+
+
+  def receive(msg = ('public_key_maps', cKM, rKM), from_ = olympus):
+    logger.info(str(self) + " received public key map from olympus")
+    self.replicaKM = rKM
+    self.clientKM = cKM
+    self.flag = 1
+
+  def receive(msg=('put_result', resultShuttle ,requestID), from_=tail_id):
+    logger.info(str(self) + " received result shuttle from :"+ str(tail_id))
+    if((requestID in self.RTRequest) == False):
+      resultStatements = resultShuttle[requestID]
+      i = 0
+      for key in self.replicaKM:
+        try:
+          self.replicaKM[key].verify(resultStatements[i])
+          i = i + 1
+        except:
+          logger.info(str(self) + " Result Statements are inconsistent. should send reconfiguration request to olympus")
+          output("Received incosistent result shuttle from tail!!!")
+          return
+      res = self.replicaKM[tail_id].verify(resultStatements[i-1]).decode('utf-8').split(';')[1]
+      logger.info(str(self) + " the result for :" + requestID + " is " + res)
+      if(res == 'OK'):
+        output("Put Successful")
+
+    else:
+      logger.info(str(self) + " received old response")
+      output("received old responses")
+    flag = flag + 1
+
+  def receive(msg=('get_result', resultShuttle ,requestID), from_=tail_id):
+    logger.info(str(self) + " received result shuttle from :"+ str(tail_id))
+    if((requestID in self.RTRequest) == False):
+      resultStatements = resultShuttle[requestID]
+      i = 0
+      for key in self.replicaKM:
+        try:
+          self.replicaKM[key].verify(resultStatements[i])
+          i = i + 1
+        except:
+          logger.info(str(self) + " Result Statements are inconsistent. should send reconfiguration request to olympus")
+          output("Result Statments received don't match, need reconfiguration")
+          break
+
+      res = self.replicaKM[tail_id].verify(resultStatements[i-1]).decode('utf-8').split(';')[1]
+      logger.info(str(self) + " the result for :" + requestID + " is " + res)
+      if(len(res) != 0):
+        output("Get Successful")
+      else:
+        output("Get unsuccessful. No such key in database.")
+
+    else:
+      logger.info(str(self) + " received old response")
+      output("Old response received, dropping it")
+    flag = flag + 1
+
+  def receive(msg=('slice_result', resultShuttle ,requestID), from_=tail_id):
+    logger.info(str(self) + " received result shuttle from :"+ str(tail_id))
+    if((requestID in self.RTRequest) == False):
+      resultStatements = resultShuttle[requestID]
+      i = 0
+      for key in self.replicaKM:
+        try:
+          self.replicaKM[key].verify(resultStatements[i])
+          i = i + 1
+        except:
+          logger.info(str(self) + " Result Statements are inconsistent. should send reconfiguration request to olympus")
+          output("Result Statments received don't match, need reconfiguration")
+          break
+
+      res = self.replicaKM[tail_id].verify(resultStatements[i-1]).decode('utf-8').split(';')[1]
+      logger.info(str(self) + " the result for :" + requestID + " is " + res)
+      if(res == 'OK'):
+        output("Slice was successful")
+      else:
+        output("Slice was unsuccessful")
+    else:
+      logger.info(str(self) + " received old response")
+      output("Old response received, dropping it")
+    flag = flag + 1
+
+  def receive(msg=('append_result', resultShuttle ,requestID), from_=tail_id):
+    logger.info(str(self) + " received result shuttle from :"+ str(tail_id))
+    if((requestID in self.RTRequest) == False):
+      resultStatements = resultShuttle[requestID]
+      i = 0
+      for key in self.replicaKM:
+        try:
+          self.replicaKM[key].verify(resultStatements[i])
+          i = i + 1
+        except:
+          logger.info(str(self) + " Result Statements are inconsistent. should send reconfiguration request to olympus")
+          output("Result Statments received don't match, need reconfiguration")
+          break
+
+      res = self.replicaKM[tail_id].verify(resultStatements[i-1]).decode('utf-8').split(';')[1]
+      logger.info(str(self) + " the result for :" + requestID + " is " + res)
+      if(res == 'OK'):
+        output("Append was successful")
+      else:
+        output("Append was unsuccessful")
+    else:
+      output("Old response received, dropping it")
+    flag = flag + 1
+
+  def receive(msg=('currentConfig', replicas), from_=olympus_id):
+    self.replicas = replicas
+
+  def receive(msg = ('dict_reply', db), from_ = p_id):
+    logger.info(str(self) + "The final state is: " + str(db))
+    output("Current State: ", db)
+    flag = flag + 1
+
+  def receive(msg = ('generated_key', pri_key), from_ = oly):
+    self.private_key = pri_key
+    self.flag = 1
+
+  def receive(msg = ('immutable', req_id), from_ = rid):
+    self.reconfig = True
+    self.reconfig_at = req_id
+    logger.info(str(self) + " Received immutable message from replica. Reconfig is underway.")
+
+  def getArguments(key_val):
+    args_t = key_val.split(',')
+    args = []
+    for arg in args_t:
+      arg = arg.strip()
+      args.append(arg[1:(len(arg)-1)])
+    return args
+
+  def getPseudorandomWL(seed, nOps):
+    with open("words.txt") as f:
+      words = f.read().splitlines()
+    operations = ['put', 'get', 'append', 'slice']
+    random.seed(seed)
+    ind = [x%4 for x in random.sample(range(nOps * 2), nOps)]
+    listops = [operations[x] for x in ind]
+    ind = [x for x in random.sample(range(20000), 12)]
+    act_words = [words[x] for x in ind]
+    #random.seed(None)
+    workload = ""
+    for op in listops:
+        if(op == 'put'):
+            str1 = act_words[random.randint(0,len(act_words) - 1)]
+            str2 = act_words[random.randint(0,len(act_words) - 1)]
+            workload = workload + ";" + "put('" + str1 + "','" + str2 + "')"
+        elif(op == 'get'):
+            str1 = act_words[random.randint(0,len(act_words) - 1)]
+            workload = workload + ";" + "get('" + str1 + "')"
+        elif(op == 'append'):
+            str1 = act_words[random.randint(0,len(act_words) - 1)]
+            str2 = act_words[random.randint(0,len(act_words) - 1)]
+            workload = workload + ";" + "append('" + str1 + "','" + str2 + "')"
+        elif(op == 'slice'):
+            str1 = act_words[random.randint(0,len(act_words) - 1)]
+            num1 = random.randint(1, len(str1))
+            num2 = random.randint(1, len(str1))
+            if num1 > num2 : str2 = str(num2) +":"+ str(num1)
+            else: str2 = str(num1) +":"+ str(num2)
+            workload = workload + ";" + "slice('" + str1 + "','" + str2 + "')"
+    output(workload.strip(';').split(';'))
+    return workload.strip(';').split(';')

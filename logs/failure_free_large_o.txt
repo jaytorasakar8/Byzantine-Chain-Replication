@@ -1,0 +1,88 @@
+2017-10-25 02:13:22 INFO     {0: <Client:4a404>, 1: <Client:4a406>, 2: <Client:4a408>, 3: <Client:4a409>, 4: <Client:4a405>, 5: <Client:4a403>, 6: <Client:4a40a>, 7: <Client:4a40b>, 8: <Client:4a402>, 9: <Client:4a407>}
+2017-10-25 02:13:22 INFO     Created public and private keys for self
+2017-10-25 02:13:22 INFO     Creating replicas. Number = 5
+2017-10-25 02:13:22 INFO     setting up keys and starting replica: <Replica:4a410>
+2017-10-25 02:13:22 INFO     setting up keys and starting replica: <Replica:4a40e>
+2017-10-25 02:13:22 INFO     setting up keys and starting replica: <Replica:4a40d>
+2017-10-25 02:13:22 INFO     setting up keys and starting replica: <Replica:4a411>
+2017-10-25 02:13:22 INFO     setting up keys and starting replica: <Replica:4a40f>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a404>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a404>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a406>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a406>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a408>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a408>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a409>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a409>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a405>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a405>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a403>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a403>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a40a>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a40a>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a40b>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a40b>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a402>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a402>
+2017-10-25 02:13:22 INFO     received getConfig message from :<Client:4a407>
+2017-10-25 02:13:22 INFO     Sending current config to: <Client:4a407>
+2017-10-25 02:13:22 INFO     received get_chain_info message from : <Replica:4a410>
+2017-10-25 02:13:22 INFO     sending back chain info to <Replica:4a410>
+2017-10-25 02:13:22 INFO     received get_chain_info message from : <Replica:4a40e>
+2017-10-25 02:13:22 INFO     sending back chain info to <Replica:4a40e>
+2017-10-25 02:13:22 INFO     received get_chain_info message from : <Replica:4a40d>
+2017-10-25 02:13:22 INFO     sending back chain info to <Replica:4a40d>
+2017-10-25 02:13:22 INFO     received get_chain_info message from : <Replica:4a411>
+2017-10-25 02:13:22 INFO     sending back chain info to <Replica:4a411>
+2017-10-25 02:13:22 INFO     received get_chain_info message from : <Replica:4a40f>
+2017-10-25 02:13:22 INFO     sending back chain info to <Replica:4a40f>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a404>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a404>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a406>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a406>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a408>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a408>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a409>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a409>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a405>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a405>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a403>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a403>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a40a>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a40a>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a40b>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a40b>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a402>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a402>
+2017-10-25 02:13:22 INFO     received generate_keys message from: <Client:4a407>
+2017-10-25 02:13:22 INFO     generating and sending private key to : <Client:4a407>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Replica:4a410>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Replica:4a410>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Replica:4a411>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Replica:4a411>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Replica:4a40d>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Replica:4a40d>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Replica:4a40e>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Replica:4a40e>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Replica:4a40f>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Replica:4a40f>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a404>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a404>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a408>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a408>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a406>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a406>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a409>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a409>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a405>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a405>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a403>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a403>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a40a>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a40a>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a40b>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a40b>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a402>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a402>
+2017-10-25 02:13:22 INFO     received get_public_key_maps message from: <Client:4a407>
+2017-10-25 02:13:22 INFO     sending public key maps to :<Client:4a407>

@@ -1,0 +1,48 @@
+2017-10-25 02:11:35 INFO     <Client:33402> sending get config request to olympus
+2017-10-25 02:11:35 INFO     <Client:33403> sending get config request to olympus
+2017-10-25 02:11:35 INFO     <Client:33402> sending generate key request to olympus
+2017-10-25 02:11:35 INFO     <Client:33403> sending generate key request to olympus
+2017-10-25 02:11:35 INFO     <Client:33402> getting public key map from olympus
+2017-10-25 02:11:35 INFO     <Client:33403> getting public key map from olympus
+2017-10-25 02:11:35 INFO     <Client:33402> received public key map from olympus
+2017-10-25 02:11:35 INFO     <Client:33402> the workload is : ["put('movie', 'star')", "append('movie', 'wars')", "get('movie')", "put('jedi', 'luke skywalker')", "slice('jedi', '0:4')", "get('jedi')"]
+2017-10-25 02:11:35 INFO     <Client:33402> sending put operation with 'movie', 'star' to head
+2017-10-25 02:11:35 INFO     <Client:33403> received public key map from olympus
+2017-10-25 02:11:35 INFO     <Client:33403> the workload is : ["put('movie', 'star')", "put('jedi', 'luke skywalker')", "put('hsdf', 'ksladjf')", "get('movie')", "slice('jedi', '0:4')", "append('movie', 'wars')"]
+2017-10-25 02:11:35 INFO     <Client:33403> sending put operation with 'movie', 'star' to head
+2017-10-25 02:11:35 INFO     <Client:33402> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33402> the result for :<Client:33402>;0 is OK
+2017-10-25 02:11:35 INFO     <Client:33402> sending append operation with ['movie', 'wars'] to head
+2017-10-25 02:11:35 INFO     <Client:33403> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33403> the result for :<Client:33403>;0 is OK
+2017-10-25 02:11:35 INFO     <Client:33403> sending put operation with 'jedi', 'luke skywalker' to head
+2017-10-25 02:11:35 INFO     <Client:33402> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33402> the result for :<Client:33402>;1 is OK
+2017-10-25 02:11:35 INFO     <Client:33402> sending get operation with movie to head
+2017-10-25 02:11:35 INFO     <Client:33403> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33403> the result for :<Client:33403>;1 is OK
+2017-10-25 02:11:35 INFO     <Client:33403> sending put operation with 'hsdf', 'ksladjf' to head
+2017-10-25 02:11:35 INFO     <Client:33402> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33402> the result for :<Client:33402>;2 is star wars
+2017-10-25 02:11:35 INFO     <Client:33402> sending put operation with 'jedi', 'luke skywalker' to head
+2017-10-25 02:11:35 INFO     <Client:33403> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33403> the result for :<Client:33403>;2 is OK
+2017-10-25 02:11:35 INFO     <Client:33403> sending get operation with movie to head
+2017-10-25 02:11:35 INFO     <Client:33402> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33402> the result for :<Client:33402>;3 is OK
+2017-10-25 02:11:35 INFO     <Client:33402> sending slice operation with ['jedi', '0:4'] to head
+2017-10-25 02:11:35 INFO     <Client:33403> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33403> the result for :<Client:33403>;3 is star wars
+2017-10-25 02:11:35 INFO     <Client:33403> sending slice operation with ['jedi', '0:4'] to head
+2017-10-25 02:11:35 INFO     <Client:33402> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33402> the result for :<Client:33402>;4 is OK
+2017-10-25 02:11:35 INFO     <Client:33402> sending get operation with jedi to head
+2017-10-25 02:11:35 INFO     <Client:33403> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33403> the result for :<Client:33403>;4 is OK
+2017-10-25 02:11:35 INFO     <Client:33403> sending append operation with ['movie', 'wars'] to head
+2017-10-25 02:11:35 INFO     <Client:33402> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33402> the result for :<Client:33402>;5 is luke
+2017-10-25 02:11:35 INFO     <Client:33402>The final state is: {'movie': 'star wars wars', 'jedi': 'luke', 'hsdf': 'ksladjf'}
+2017-10-25 02:11:35 INFO     <Client:33403> received result shuttle from :<Replica:33406>
+2017-10-25 02:11:35 INFO     <Client:33403> the result for :<Client:33403>;5 is OK
+2017-10-25 02:11:35 INFO     <Client:33403>The final state is: {'movie': 'star wars wars', 'jedi': 'luke', 'hsdf': 'ksladjf'}

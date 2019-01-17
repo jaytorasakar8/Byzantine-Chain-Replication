@@ -1,0 +1,39 @@
+2017-10-25 02:23:50 INFO     <Client:89002> sending get config request to olympus
+2017-10-25 02:23:50 INFO     <Client:89003> sending get config request to olympus
+2017-10-25 02:23:50 INFO     <Client:89002> sending generate key request to olympus
+2017-10-25 02:23:50 INFO     <Client:89003> sending generate key request to olympus
+2017-10-25 02:23:50 INFO     <Client:89002> getting public key map from olympus
+2017-10-25 02:23:50 INFO     <Client:89003> getting public key map from olympus
+2017-10-25 02:23:50 INFO     <Client:89002> received public key map from olympus
+2017-10-25 02:23:50 INFO     <Client:89002> the workload is : ['pseudorandom(23,5)']
+2017-10-25 02:23:50 INFO     <Client:89003> received public key map from olympus
+2017-10-25 02:23:50 INFO     <Client:89002> generating the pseudo random workload
+2017-10-25 02:23:50 INFO     <Client:89003> the workload is : ['pseudorandom(234,5)']
+2017-10-25 02:23:50 INFO     <Client:89003> generating the pseudo random workload
+2017-10-25 02:23:50 INFO     <Client:89002> sending put operation with 'tasty','tasty' to head
+2017-10-25 02:23:50 INFO     <Client:89003> sending get operation with paraguay to head
+2017-10-25 02:23:53 INFO     <Client:89002> Operation timeout. Broadcasting to all clients
+2017-10-25 02:23:53 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:23:53 INFO     <Client:89003> sending put operation with 'nichols','attainment' to head
+2017-10-25 02:23:56 INFO     <Client:89002> Operation timeout. Broadcasting to all clients
+2017-10-25 02:23:56 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:23:56 INFO     <Client:89002> sending get operation with material to head
+2017-10-25 02:23:59 INFO     <Client:89002> Operation timeout. Broadcasting to all clients
+2017-10-25 02:23:59 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:23:59 INFO     <Client:89003> sending put operation with 'decreases','decreases' to head
+2017-10-25 02:23:59 INFO     <Client:89002> sending put operation with 'allowances','prepaid' to head
+2017-10-25 02:24:02 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:02 INFO     <Client:89002> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:05 INFO     <Client:89002> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:05 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:05 INFO     <Client:89003> sending append operation with ['nichols', 'basement'] to head
+2017-10-25 02:24:05 INFO     <Client:89002> sending get operation with yuan to head
+2017-10-25 02:24:08 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:08 INFO     <Client:89002> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:08 INFO     <Client:89002> sending append operation with ['large', 'osama'] to head
+2017-10-25 02:24:08 INFO     <Client:89003> sending put operation with 'promoter','basement' to head
+2017-10-25 02:24:11 INFO     <Client:89002> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:11 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:11 INFO     <Client:89002>The final state is: {'tasty': 'tasty', 'nichols': 'attainment basement', 'decreases': 'decreases', 'allowances': 'prepaid', 'promoter': 'basement'}
+2017-10-25 02:24:14 INFO     <Client:89003> Operation timeout. Broadcasting to all clients
+2017-10-25 02:24:14 INFO     <Client:89003>The final state is: {'tasty': 'tasty', 'nichols': 'attainment basement', 'decreases': 'decreases', 'allowances': 'prepaid', 'promoter': 'basement'}
